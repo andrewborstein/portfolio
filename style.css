@@ -13,6 +13,7 @@ nav i {
 }
 main {
 	padding-left: 240px;
+	background: url(http://subtlepatterns.com/patterns/tiny_grid.png);
 }
 ul.side-nav li {
 	padding: 0
@@ -53,7 +54,7 @@ li.logo span {
 	width: 90%
 }
 h3 {
-	padding: 1em 1.5em;
+	padding: 1.3em 1.6em;
 	font-weight: 200;
 	margin-top: 0;
 	text-transform: uppercase;
@@ -67,15 +68,19 @@ h3 {
 #intro.section {
 	background: url(img/andrew-borstein.jpg) no-repeat center center;
 	background-size: cover;
+	position: relative;
 }
 #intro.section .container {
 	position: absolute;
+	top: 0;
+	left: 0;
 	color: white;
 	font-weight: 200;
 }
 #intro.section .container * {
 	font-weight: 200;
 	padding: 0 30px;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 .waves-effect.waves-blue .waves-ripple {
      /* The alpha value allows the text and background color
@@ -90,9 +95,17 @@ h3 {
 	font-size: 90%;
 	color: #999;
 }
+.card ul {
+	margin-bottom: 0
+}
+
 .card ul li {
 	list-style-type: disc;
 	margin-left: 24px;
+	line-height: 200%;
+}
+.card .card-title {
+	font-size: 22px;
 }
 .card-title a {
 	-webkit-transition: .25s all;
@@ -106,6 +119,44 @@ h3 {
 	color: #fafafa !important;
 	border-bottom: 3px solid #2196F3 !important;
 }
+#skills .card.large {
+height: 360px;
+}
+#skills h4 {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+}
+.card.large .card-content p {
+	margin: 0;
+	color: inherit;
+	padding: 1em 0;
+}
+.card.large .card-image {
+	height: 230px;
+}
+.card.large .card-content {
+	height: auto;
+}
+.card.medium .card-image {
+	height: 240px;
+}
+.card-action a.btn-floating {
+margin-bottom: 0;
+}
+
+#contact a:not(.btn-floating) {
+	position: relative;
+	left: 20px;
+	bottom: 6px;
+}
+/*
+@media (min-width: 1200px) {
+	.container {
+		width: 860px
+	}
+}
+*/
 @media (max-width: 992px) {
 	main {
 		padding-left: 0px;
@@ -122,4 +173,11 @@ h3 {
 		height: 56px;
 		line-height: 56px;
 	}
+	h3 {
+		padding: .5em .75em
+	}
+	.container {
+		margin:  0 auto
+	}
+
 }
