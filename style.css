@@ -1,3 +1,6 @@
+body {
+	font-size: 16px;
+}
 nav {
 	background: white;
 	box-shadow: none;
@@ -53,31 +56,70 @@ h3 {
 	padding: 1em 1.5em;
 	font-weight: 200;
 	margin-top: 0;
+	text-transform: uppercase;
 }
 .section {
 	padding-top: 0;
+}
+.full-height {
 	height: 100vh;
 }
 #intro.section {
 	background: url(img/andrew-borstein.jpg) no-repeat center center;
 	background-size: cover;
 }
-#intro.section h1 {
+#intro.section .container {
 	position: absolute;
 	color: white;
-	font-weight: 200
+	font-weight: 200;
+}
+#intro.section .container * {
+	font-weight: 200;
+	padding: 0 30px;
 }
 .waves-effect.waves-blue .waves-ripple {
      /* The alpha value allows the text and background color
      of the button to still show through. */
       background-color: rgba(33, 150, 243, 0.2);
     }
+
+.card .card-content p {
+	font-size: 90%;
+}
+.card-action span {
+	font-size: 90%;
+	color: #999;
+}
+.card ul li {
+	list-style-type: disc;
+	margin-left: 24px;
+}
+.card-title a {
+	-webkit-transition: .25s all;
+	-moz-transition: .25s all;
+	transition: .25s all;
+	border-bottom: 3px solid #2196F3 !important;
+	padding: 3px 3px 0 3px;
+}
+.card-title a:hover {
+	background-color: #2196F3;
+	color: #fafafa !important;
+	border-bottom: 3px solid #2196F3 !important;
+}
 @media (max-width: 992px) {
 	main {
 		padding-left: 0px;
+		padding-top: 64px;
 	}
 	nav {
 		height: 64px;
-		background: #2196F3;
+		background: #fff;
+		position: absolute;
+	}
+	nav a.button-collapse,
+	nav a.button-collapse i {
+		color: #2196F3;
+		height: 56px;
+		line-height: 56px;
 	}
 }
