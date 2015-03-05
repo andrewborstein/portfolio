@@ -1,0 +1,83 @@
+nav {
+	background: white;
+	box-shadow: none;
+	height: 0;
+}
+nav i {
+	padding: 0 5px 0 10px;
+	position: relative;
+	top: 5px;
+}
+main {
+	padding-left: 240px;
+}
+ul.side-nav li {
+	padding: 0
+}
+ul.side-nav.fixed a {
+	display: block;
+	color: #444;
+	box-sizing: content-box;
+	line-height: 100%;
+	padding: 10px 0 12px
+}
+ul.table-of-contents li.logo a.active,
+ul.table-of-contents li.logo a:hover {
+	border: none;
+	font-weight: 200
+}
+ul.side-nav.fixed li.logo {
+	padding: 30px 30px 40px;
+	border-bottom: 1px solid #ddd;
+	min-height: 90px;
+	box-sizing: content-box;
+	background-color: #fafafa
+}
+ul.side-nav.fixed li.logo a {
+	line-height: 100%;
+	font-weight: 200;
+}
+ul.table-of-contents li:not(.logo) a.active,
+ul.table-of-contents li:not(.logo) a:hover {
+	border-left: 3px solid ;
+	background-color: #fafafa
+}
+li.logo span {
+	display: block;
+	font-size: 14px;
+}
+.container {
+	width: 90%
+}
+h3 {
+	padding: 1em 1.5em;
+	font-weight: 200;
+	margin-top: 0;
+}
+.section {
+	padding-top: 0;
+	height: 100vh;
+}
+#intro.section {
+	background: url(img/andrew-borstein.jpg) no-repeat center center;
+	background-size: cover;
+}
+#intro.section h1 {
+	position: absolute;
+	color: white;
+	font-weight: 200
+}
+.waves-effect.waves-blue .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: rgba(33, 150, 243, 0.2);
+    }
+@media (max-width: 992px) {
+	main {
+		padding-left: 0px;
+	}
+	nav {
+		height: 64px;
+		background: #2196F3;
+	}
+}
