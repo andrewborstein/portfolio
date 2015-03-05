@@ -192,5 +192,8 @@ margin-bottom: 0;
 	.container {
 		margin:  0 auto
 	}
+	.card ul li {
+		font-size: 14px;
+	}
 
 }
