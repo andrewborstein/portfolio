@@ -62,14 +62,15 @@ li.logo span {
 	width: 90%
 }
 h3 {
-	padding: 1.3em 1.6em;
+	padding: 30px 40px;
 	font-weight: 200;
 	margin-top: 0;
 	text-transform: uppercase;
-	margin-bottom: 1.5em;
+	margin-bottom: 60px;
 }
 .section {
 	padding-top: 0;
+	padding-bottom: 30px;
 }
 .full-height {
 	height: 100vh;
@@ -97,7 +98,7 @@ h3 {
       background-color: rgba(33, 150, 243, 0.2);
  }
 .card {
-	margin-bottom: 3em;
+	margin-bottom: 60px;
 }
 .card .card-content p {
 	font-size: 90%;
@@ -141,7 +142,7 @@ height: 360px;
 .card.large .card-content p {
 	margin: 0;
 	color: inherit;
-	padding: 1em 0;
+	padding: 30px 0;
 }
 .card.large .card-image {
 	height: 230px;
@@ -185,8 +186,8 @@ margin-bottom: 0;
 		line-height: 56px;
 	}
 	h3 {
-		padding: .5em .75em;
-		margin-bottom: 75em;
+		padding: 20px 30px;
+  		margin-bottom: 40px;
 	}
 	.container {
 		margin:  0 auto
