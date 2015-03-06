@@ -157,7 +157,10 @@ h3 {
 	padding-bottom: 20px;
 	margin-bottom: 30px;
 }
-
+/*#skills .row {
+	margin-bottom: 60px;
+}
+*/
 #skills .col img.responsive-img {
   	display: table-cell;
 	text-align: center;
