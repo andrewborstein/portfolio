@@ -105,10 +105,16 @@ h3 {
 	color: white;
 	font-weight: 200;
 }
-#intro.section .container * {
-	font-weight: 200;
+#intro.section .container *:not(span) {
+	font-weight: 300;
 	padding: 0 30px;
 	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+#intro.section .underline {
+	border-bottom: 5px solid #009688;
+}
+#intro.section .teal {
+	padding: 0 10px;
 }
 .waves-effect.waves-blue .waves-ripple {
      /* The alpha value allows the text and background color
@@ -118,11 +124,23 @@ h3 {
 .card {
 	margin-bottom: 60px;
 }
+.card .role {
+    position: absolute;
+    top: 35px;
+    right: 38px;
+}
+.card .card-content {
+	padding-bottom: 30px;
+}
 .card .card-content p {
-	font-size: 90%;
+	padding: 5px 0 0;
+}
+#experience .card-action {
+	border: none;
+	background-color: rgba(0,0,0,0.02);
 }
 .card-action span {
-	font-size: 90%;
+	font-size: 85%;
 	color: #999;
 }
 .card ul {
@@ -135,18 +153,17 @@ h3 {
 	line-height: 200%;
 }
 .card .card-title {
-	font-size: 22px;
+	font-size: 24px;
 }
-.card-title a {
+
+a.hoverline {
 	-webkit-transition: .25s all;
 	-moz-transition: .25s all;
 	transition: .25s all;
-	border-bottom: 3px solid #009688 !important;
+	border-bottom: 3px solid transparent !important;
 	padding: 3px 3px 0 3px;
 }
-.card-title a:hover {
-	background-color: #009688;
-	color: #fafafa !important;
+a.hoverline:hover {
 	border-bottom: 3px solid #009688 !important;
 }
 #skills .card.large {
@@ -165,12 +182,17 @@ h3 {
   	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
-	max-height: 100px
+	max-height: 100px;
+	padding-bottom: 10px;
 }
 .card.large .card-content p {
 	margin: 0;
 	color: inherit;
 	padding: 30px 0;
+}
+#experience .card-content .row {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
 }
 .card.large .card-image {
 	height: 230px;
@@ -189,6 +211,9 @@ margin-bottom: 0;
 	position: relative;
 	left: 20px;
 	bottom: 6px;
+}
+#experience .col.s12.m2 {
+	text-align: center;
 }
 
 @media (min-width: 1200px) {
@@ -231,6 +256,10 @@ margin-bottom: 0;
 	.container {
 		margin:  0 auto
 	}
-	
+	.card .role {
+	    position: relative;
+	    top: initial;
+	    right: initial;
+	}
 
 }
