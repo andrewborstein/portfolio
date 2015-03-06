@@ -156,7 +156,9 @@ h3 {
 .card .card-title {
 	font-size: 24px;
 }
-
+.card i.right {
+  margin-left: 10px;
+}
 a.hoverline {
 	-webkit-transition: .25s all;
 	-moz-transition: .25s all;
