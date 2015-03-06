@@ -1,6 +1,9 @@
 body {
 	font-size: 16px;
 }
+a {
+	color: #009688
+}
 blockquote {
 	margin: 20px 0;
 	padding-left: 1.5rem;
@@ -20,8 +23,11 @@ nav i {
 	top: 5px;
 }
 main {
-	padding-left: 240px;
+	padding-left: 190px;
 	background: url(http://subtlepatterns.com/patterns/tiny_grid.png);
+}
+ul.side-nav {
+	width: 190px;
 }
 ul.side-nav li {
 	padding: 0
@@ -59,7 +65,7 @@ li.logo span {
 	font-size: 14px;
 }
 .container {
-	width: 90%
+	width: 95%
 }
 h3 {
 	padding: 30px 40px;
@@ -76,10 +82,22 @@ h3 {
 	height: 100vh;
 }
 #intro.section {
+	background: url(img/andrew-borstein2.jpg) no-repeat center center;
+	background-size: cover;
+	position: relative;
+}
+/*
+#intro.section.two {
 	background: url(img/andrew-borstein.jpg) no-repeat center center;
 	background-size: cover;
 	position: relative;
 }
+#intro.section.three {
+	background: url(img/andrew-borstein3.jpg) no-repeat center center;
+	background-size: cover;
+	position: relative;
+}
+*/
 #intro.section .container {
 	position: absolute;
 	top: 0;
@@ -123,21 +141,28 @@ h3 {
 	-webkit-transition: .25s all;
 	-moz-transition: .25s all;
 	transition: .25s all;
-	border-bottom: 3px solid #2196F3 !important;
+	border-bottom: 3px solid #009688 !important;
 	padding: 3px 3px 0 3px;
 }
 .card-title a:hover {
-	background-color: #2196F3;
+	background-color: #009688;
 	color: #fafafa !important;
-	border-bottom: 3px solid #2196F3 !important;
+	border-bottom: 3px solid #009688 !important;
 }
 #skills .card.large {
-height: 360px;
+	height: 360px;
 }
 #skills h4 {
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 20px;
 	margin-bottom: 30px;
+}
+
+#skills .col img.responsive-img {
+  	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	max-height: 100px
 }
 .card.large .card-content p {
 	margin: 0;
@@ -168,7 +193,18 @@ margin-bottom: 0;
 		width: 860px
 	}
 }
-
+@media (max-width: 1360px) {
+	.card ul li {
+		margin-left: 20px;
+		line-height: 200%;
+		font-size: 14px;
+	}
+}
+@media (max-width: 1160px) {
+	.card ul li {
+		line-height: 150%;
+	}
+}
 @media (max-width: 992px) {
 	main {
 		padding-left: 0px;
@@ -181,7 +217,7 @@ margin-bottom: 0;
 	}
 	nav a.button-collapse,
 	nav a.button-collapse i {
-		color: #2196F3;
+		color: #009688;
 		height: 56px;
 		line-height: 56px;
 	}
@@ -192,8 +228,6 @@ margin-bottom: 0;
 	.container {
 		margin:  0 auto
 	}
-	.card ul li {
-		font-size: 14px;
-	}
+	
 
 }
