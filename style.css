@@ -237,6 +237,11 @@ margin-bottom: 0;
 	}
 }
 @media (max-width: 992px) {
+	nav.hide-on-med-and-up.trigger {
+	  position: fixed;
+	  top: 0;
+	  z-index: 2;
+	}
 	main {
 		padding-left: 0px;
 		padding-top: 64px;
@@ -272,5 +277,64 @@ margin-bottom: 0;
 	#intro.section .container *:not(span) {
 		padding: 0;
 	}
-
+	.card .card-content .card-title {
+    line-height: 24px;
+    font-size: 20px;
+	}
+	#experience span.card-title {
+    
+    text-align: center;
+    display: block
+	}
+	#experience span.card-title a {
+	    margin: 0;
+	}
+	i.mdi-navigation-close.right {
+	  position: relative;
+	  bottom: 35px;
+	}
+	.fa-external-link:before {
+	  position: relative;
+	  left: 3px;
+	  top: 2px;
+	}
+	#contact a:not(.btn-floating) {
+    text-align: center;
+    display: block;
+    left: initial;
+    bottom: initial;
+	}
+	a.btn-floating.btn-large {
+	    display: block;
+	    text-align: center;
+	    margin: 0 auto;
+	}
+	.name-title {
+    position: absolute;
+	  display: block;
+	  height: 100%;
+	  width: 100%;
+	  text-align: center;
+	  padding-top: 15px;
+	}
+	.name-title > span,
+	.name-title > a {
+	    position: relative;
+	    line-height: 20px;
+	}
+	.name-title a {
+	    font-size: 22px;
+	    display: block;
+	}
+	.name-title span {
+	    font-size: 14px;
+	    display: block;
+	}
+	h3, .container {
+    position: relative;   
+    top: 64px;
+	}
+	section#intro {
+	    margin-bottom: -64px;
+	}
 }

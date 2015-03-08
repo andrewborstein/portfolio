@@ -45,8 +45,8 @@
   </head>
 
   <body>
-    <nav>
-      <ul class="side-nav fixed section table-of-contents hide-on-small-only">
+    <nav ng-class="hide-on-small-only">
+      <ul class="side-nav fixed section table-of-contents">
         <li class="logo">
           <a id="logo-container" href="#intro" class="brand-logo teal-text">
             Andrew Borstein
@@ -60,19 +60,28 @@
         <li class="bold"><a href="#education" class="waves-effect waves-teal brown-text"><i class="mdi-social-school small"></i> Education</a></li>
         <li class="bold"><a href="#contact" class="waves-effect waves-teal brown-text"><i class="mdi-content-mail small"></i> Contact</a></li>
       </ul>
-      <ul id="slide-out" class="side-nav">
-        <li class="bold"><a href="#about" class="waves-effect waves-teal">About</a></li>
-        <li class="bold"><a href="#experience" class="waves-effect waves-teal">Experience</a></li>
-        <li class="bold"><a href="#projects" class="waves-effect waves-teal">Projects</a></li>
-        <li class="bold"><a href="#skills" class="waves-effect waves-teal">Skills</a></li>
-        <li class="bold"><a href="#education" class="waves-effect waves-teal">Education</a></li>
-        <li class="bold"><a href="#contact" class="waves-effect waves-teal">Contact</a></li>
-      </ul>
+    </nav>
+    <nav class="hide-on-med-and-up trigger z-depth-1">
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      <div class="name-title">
+        <a id="name" href="#main" class="teal-text">Andrew Borstein</a>
+        <span class="brown-text light">Full Stack Developer</span>
+      </div>
+    </nav>
+    <nav class="hide-on-med-and-up">
+      <ul id="slide-out" class="side-nav">
+        <li class="bold"><a href="#about" class="waves-effect waves-teal brown-text"><i class="mdi-social-person small"></i> About</a></li>
+        <li class="bold"><a href="#experience" class="waves-effect waves-teal brown-text"><i class="mdi-action-trending-up small"></i> Experience</a></li>
+        <li class="bold"><a href="#projects" class="waves-effect waves-teal brown-text"><i class="mdi-av-web small"></i> Projects</a></li>
+        <li class="bold"><a href="#skills" class="waves-effect waves-teal brown-text"><i class="mdi-av-equalizer small"></i> Skills</a></li>
+        <li class="bold"><a href="#education" class="waves-effect waves-teal brown-text"><i class="mdi-social-school small"></i> Education</a></li>
+        <li class="bold"><a href="#contact" class="waves-effect waves-teal brown-text"><i class="mdi-content-mail small"></i> Contact</a></li>
+      </ul>
+      
     </nav>
     
 
-    <main>
+    <main id="main">
       
         <section id="intro" class="section scrollspy full-height">
           <div class="container">
@@ -166,7 +175,7 @@
                 </ul>
               </div>
               <div class="card-action">
-                 <span>March 2014 - Feb 2015  |  Pawtucket, RI</span>
+                 <span>Mar 2014 - Feb 2015  |  Pawtucket, RI</span>
               </div>
             </div>
 
@@ -474,7 +483,12 @@
     $(document).ready(function(){
       $('.scrollspy').scrollSpy();
       // Initialize collapse button
-      $(".button-collapse").sideNav();
+      $(".button-collapse").sideNav({
+          menuWidth: 160, // Default is 240
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+      );
     });
   </script>
   </body>
