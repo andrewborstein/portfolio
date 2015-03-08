@@ -336,7 +336,7 @@ margin-bottom: 0;
     left: initial;
     bottom: initial;
 	}
-	a.btn-floating.btn-large {
+	#contact a.btn-floating.btn-large {
 	    display: block;
 	    text-align: center;
 	    margin: 0 auto;
