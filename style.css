@@ -218,7 +218,11 @@ margin-bottom: 0;
 #experience .col.s12.m2 {
 	text-align: center;
 }
-
+.fa-external-link:before {
+  position: relative;
+  left: 3px;
+  top: 2px;
+}
 @media (min-width: 1200px) {
 	#experience .container {
 		width: 860px
@@ -237,11 +241,6 @@ margin-bottom: 0;
 	}
 }
 @media (max-width: 992px) {
-	nav.hide-on-med-and-up.trigger {
-	  position: fixed;
-	  top: 0;
-	  z-index: 2;
-	}
 	main {
 		padding-left: 0px;
 		padding-top: 64px;
@@ -264,50 +263,12 @@ margin-bottom: 0;
 	.container {
 		margin:  0 auto
 	}
-	.card .role {
-	    position: relative;
-	    top: initial;
-	    right: initial;
-	}
-	h2 {
-	  font-size: 22px;
-	  line-height: 200%;
-	  margin: 30px 0 0;
-	}
-	#intro.section .container *:not(span) {
-		padding: 0;
-	}
-	.card .card-content .card-title {
-    line-height: 24px;
-    font-size: 20px;
-	}
-	#experience span.card-title {
-    
-    text-align: center;
-    display: block
-	}
-	#experience span.card-title a {
-	    margin: 0;
-	}
-	i.mdi-navigation-close.right {
-	  position: relative;
-	  bottom: 35px;
-	}
-	.fa-external-link:before {
-	  position: relative;
-	  left: 3px;
-	  top: 2px;
-	}
-	#contact a:not(.btn-floating) {
-    text-align: center;
-    display: block;
-    left: initial;
-    bottom: initial;
-	}
-	a.btn-floating.btn-large {
-	    display: block;
-	    text-align: center;
-	    margin: 0 auto;
+	
+	nav.hide-on-large.only.trigger {
+		display: block;
+	  position: fixed;
+	  top: 0;
+	  z-index: 2;
 	}
 	.name-title {
     position: absolute;
@@ -330,11 +291,54 @@ margin-bottom: 0;
 	    font-size: 14px;
 	    display: block;
 	}
-	h3, .container {
+	h3, 
+	.container {
     position: relative;   
     top: 64px;
 	}
 	section#intro {
 	    margin-bottom: -64px;
+	}
+}
+@media (max-width: 600px) {
+	h2 {
+	  font-size: 22px;
+	  line-height: 200%;
+	  margin: 30px 0 0;
+	}
+	#intro.section .container *:not(span) {
+		padding: 0;
+	}
+	.card .card-content .card-title {
+    line-height: 24px;
+    font-size: 20px;
+	}
+	.card .role {
+	    position: relative;
+	    top: initial;
+	    right: initial;
+	}
+	#experience span.card-title {
+    
+    text-align: center;
+    display: block
+	}
+	#experience span.card-title a {
+	    margin: 0;
+	}
+	i.mdi-navigation-close.right {
+	  position: relative;
+	  bottom: 35px;
+	}
+	#contact a:not(.btn-floating) {
+    text-align: center;
+    display: block;
+    left: initial;
+    bottom: initial;
+	}
+	a.btn-floating.btn-large {
+	    display: block;
+	    text-align: center;
+	    margin: 0 auto;
 	}
 }
