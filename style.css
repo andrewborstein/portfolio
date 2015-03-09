@@ -18,7 +18,7 @@ nav {
 	height: 0;
 }
 nav i {
-	padding: 0 5px 0 10px;
+	padding: 0 15px;
 	position: relative;
 	top: 5px;
 }
@@ -59,6 +59,10 @@ ul.table-of-contents li:not(.logo) a.active,
 ul.table-of-contents li:not(.logo) a:hover {
 	border-left: 3px solid ;
 	background-color: #fafafa
+}
+ul.side-nav.fixed.table-of-contents li:not(.logo) a span,
+ul#slide-out li:not(.logo) a span {
+	color: #333 !important
 }
 li.logo span {
 	display: block;
