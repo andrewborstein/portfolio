@@ -249,6 +249,11 @@ margin-bottom: 0;
 		padding-left: 0px;
 		padding-top: 64px;
 	}
+	ul.side-nav a {
+	  width: 100%;
+	  padding: 0;
+	  line-height: 100%;
+	}
 	nav {
 		height: 64px;
 		background: #fff;
