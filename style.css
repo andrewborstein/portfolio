@@ -12,6 +12,9 @@ blockquote {
 	font-weight: 400;
 	font-size: 125%;
 }
+.text-center {
+	text-align: center
+}
 nav {
 	background: white;
 	box-shadow: none;
