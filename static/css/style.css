@@ -27,7 +27,7 @@ nav i {
 	top: 5px;
 }
 main {
-	background: url(/static/img/bg.png) repeat;
+	background: url(../../static/img/bg.png) repeat;
 	padding-left: 190px;
 }
 ul.side-nav {
@@ -91,7 +91,7 @@ h3 {
 }
 #intro.section {
 	background-size: cover;
-	background: url(/static/img/andrew-borstein2.jpg) no-repeat center center;
+	background: url(../../static/img/andrew-borstein2.jpg) no-repeat center center;
 	position: relative;
 }
 #intro.section .container {
