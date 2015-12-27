@@ -1,19 +1,20 @@
 body {
+	color: #444;
 	font-size: 16px;
 }
 a {
-	color: #009688
+	color: #009688;
 }
 blockquote {
-	margin: 20px 0;
-	padding-left: 1.5rem;
 	border-left: 5px solid #795548;
 	color: #795548;
-	font-weight: 400;
 	font-size: 125%;
+	font-weight: 400;
+	margin: 20px 0;
+	padding-left: 1.5rem;
 }
 .text-center {
-	text-align: center
+	text-align: center;
 }
 nav {
 	background: white;
@@ -26,46 +27,46 @@ nav i {
 	top: 5px;
 }
 main {
-	padding-left: 190px;
 	background: url(http://subtlepatterns.com/patterns/tiny_grid.png);
+	padding-left: 190px;
 }
 ul.side-nav {
 	width: 190px;
 }
 ul.side-nav li {
-	padding: 0
+	padding: 0;
 }
 ul.side-nav.fixed a {
-	display: block;
-	color: #444;
 	box-sizing: content-box;
+	color: #444;
+	display: block;
 	line-height: 100%;
-	padding: 10px 0 12px
+	padding: 10px 0 12px;
 }
 ul.table-of-contents li.logo a.active,
 ul.table-of-contents li.logo a:hover {
 	border: none;
-	font-weight: 200
+	font-weight: 200;
 }
 ul.side-nav.fixed li.logo {
-	padding: 30px 30px 40px;
+	background-color: #fafafa;
 	border-bottom: 1px solid #ddd;
-	min-height: 90px;
 	box-sizing: content-box;
-	background-color: #fafafa
+	min-height: 90px;
+	padding: 30px 30px 40px;
 }
 ul.side-nav.fixed li.logo a {
-	line-height: 100%;
 	font-weight: 200;
+	line-height: 100%;
 }
 ul.table-of-contents li:not(.logo) a.active,
 ul.table-of-contents li:not(.logo) a:hover {
+	background-color: #fafafa;
 	border-left: 3px solid ;
-	background-color: #fafafa
 }
 ul.side-nav.fixed.table-of-contents li:not(.logo) a span,
 ul#slide-out li:not(.logo) a span {
-	color: #333 !important
+	color: #333 !important;
 }
 li.logo span {
 	display: block;
@@ -75,48 +76,36 @@ li.logo span {
 	width: 95%
 }
 h3 {
-	padding: 30px 40px;
 	font-weight: 200;
-	margin-top: 0;
-	text-transform: uppercase;
 	margin-bottom: 60px;
+	margin-top: 0;
+	padding: 30px 40px;
+	text-transform: uppercase;
 }
 .section {
-	padding-top: 0;
 	padding-bottom: 30px;
+	padding-top: 0;
 }
 .full-height {
 	height: 100vh;
 }
 #intro.section {
+	background-size: cover;
 	background: url(img/andrew-borstein2.jpg) no-repeat center center;
-	background-size: cover;
 	position: relative;
 }
-/*
-#intro.section.two {
-	background: url(img/andrew-borstein.jpg) no-repeat center center;
-	background-size: cover;
-	position: relative;
-}
-#intro.section.three {
-	background: url(img/andrew-borstein3.jpg) no-repeat center center;
-	background-size: cover;
-	position: relative;
-}
-*/
 #intro.section .container {
-	position: absolute;
-	top: 0;
-	left: 0;
 	color: white;
 	font-weight: 200;
+	left: 0;
+	position: absolute;
+	top: 0;
 }
 #intro.section .container *:not(span) {
 	font-weight: 300;
+	line-height: 150%;
 	padding: 0 30px;
 	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-	line-height: 150%;
 }
 #intro.section .underline {
 	border-bottom: 5px solid #009688;
@@ -125,17 +114,17 @@ h3 {
 	padding: 0 10px;
 }
 .waves-effect.waves-blue .waves-ripple {
-     /* The alpha value allows the text and background color
-     of the button to still show through. */
-      background-color: rgba(33, 150, 243, 0.2);
+   /* The alpha value allows the text and background color
+   of the button to still show through. */
+    background-color: rgba(33, 150, 243, 0.2);
  }
 .card {
 	margin-bottom: 60px;
 }
 .card .role {
-    position: absolute;
-    top: 35px;
-    right: 38px;
+  position: absolute;
+  right: 38px;
+  top: 35px;
 }
 .card a {
 	margin-right: 0;
@@ -146,9 +135,20 @@ h3 {
 .card .card-content p {
 	padding: 5px 0 0;
 }
+.card h5 {
+  font-size: 1.5rem;
+  margin-bottom: -0.5rem;
+  margin-top: 2rem;
+}
+.card h6 {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
 #experience .card-action {
-	border: none;
 	background-color: rgba(0,0,0,0.02);
+	border: none;
 }
 #experience .card .col.s12.m2 a {
   display: block;
@@ -161,13 +161,13 @@ h3 {
 	color: #999;
 }
 .card ul {
-	margin-bottom: 0
+	margin-bottom: 0;
 }
 
 .card ul li {
+	line-height: 200%;
 	list-style-type: disc;
 	margin-left: 24px;
-	line-height: 200%;
 }
 .card .card-title {
 	font-size: 24px;
@@ -176,11 +176,11 @@ h3 {
   margin-left: 10px;
 }
 a.hoverline {
-	-webkit-transition: .25s all;
-	-moz-transition: .25s all;
-	transition: .25s all;
 	border-bottom: 3px solid transparent !important;
 	padding: 3px 3px 0 3px;
+	transition: .25s all;
+	-moz-transition: .25s all;
+	-webkit-transition: .25s all;
 }
 a.hoverline:hover {
 	border-bottom: 3px solid #009688 !important;
@@ -190,24 +190,20 @@ a.hoverline:hover {
 }
 #skills h4 {
 	border-bottom: 1px solid #ddd;
-	padding-bottom: 20px;
 	margin-bottom: 30px;
+	padding-bottom: 20px;
 }
-/*#skills .row {
-	margin-bottom: 60px;
-}
-*/
 #skills .col img.responsive-img {
-  display: table-cell;
-	text-align: center;
-	vertical-align: middle;
+	margin: 0 auto;
 	max-height: 100px;
 	padding-bottom: 10px;
-	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+  display: table-cell;
 }
 .card.large .card-content p {
-	margin: 0;
 	color: inherit;
+	margin: 0;
 	padding: 30px 0;
 }
 #experience .card-content .row {
@@ -224,20 +220,20 @@ a.hoverline:hover {
 	height: 240px;
 }
 .card-action a.btn-floating {
-margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 #contact a:not(.btn-floating) {
-	position: relative;
-	left: 20px;
 	bottom: 6px;
+	left: 20px;
+	position: relative;
 }
 #experience .col.s12.m2 {
 	text-align: center;
 }
 .fa-external-link:before {
-  position: relative;
   left: 3px;
+  position: relative;
   top: 2px;
 }
 @media (min-width: 1200px) {
@@ -247,9 +243,9 @@ margin-bottom: 0;
 }
 @media (max-width: 1360px) {
 	.card ul li {
-		margin-left: 20px;
-		line-height: 200%;
 		font-size: 14px;
+		line-height: 200%;
+		margin-left: 20px;
 	}
 }
 @media (max-width: 1160px) {
@@ -263,13 +259,13 @@ margin-bottom: 0;
 		padding-top: 64px;
 	}
 	ul.side-nav a {
-	  width: 100%;
-	  padding: 0;
 	  line-height: 100%;
+	  padding: 0;
+	  width: 100%;
 	}
 	nav {
-		height: 64px;
 		background: #fff;
+		height: 64px;
 		position: absolute;
 	}
 	nav a.button-collapse,
@@ -280,12 +276,12 @@ margin-bottom: 0;
 	}
 	h3 {
 		padding: 20px 30px;
-  		margin-bottom: 40px;
+  	margin-bottom: 40px;
 	}
 	.container {
-		margin:  0 auto
+		margin:  0 auto;
 	}
-	
+
 	nav.hide-on-large.only.trigger {
 		display: block;
 	  position: fixed;
@@ -293,29 +289,29 @@ margin-bottom: 0;
 	  z-index: 2;
 	}
 	.name-title {
-    position: absolute;
 	  display: block;
 	  height: 100%;
-	  width: 100%;
-	  text-align: center;
 	  padding-top: 15px;
+	  text-align: center;
+	  width: 100%;
+    position: absolute;
 	}
 	.name-title > span,
 	.name-title > a {
-	    position: relative;
-	    line-height: 20px;
+    position: relative;
+    line-height: 20px;
 	}
 	.name-title a {
-	    font-size: 22px;
-	    display: block;
+    font-size: 22px;
+    display: block;
 	}
 	.name-title span {
-	    font-size: 14px;
-	    display: block;
+    display: block;
+    font-size: 14px;
 	}
-	h3, 
+	h3,
 	.container {
-    position: relative;   
+    position: relative;
     top: 64px;
 	}
 	section#intro {
@@ -332,21 +328,20 @@ margin-bottom: 0;
 		padding: 0;
 	}
 	.card .card-content .card-title {
-    line-height: 24px;
     font-size: 20px;
+    line-height: 24px;
 	}
 	.card .role {
-	    position: relative;
-	    top: initial;
-	    right: initial;
+    position: relative;
+    right: initial;
+    top: initial;
 	}
 	#experience span.card-title {
-    
     text-align: center;
     display: block
 	}
 	#experience span.card-title a {
-	    margin: 0;
+	   margin: 0;
 	}
 	i.mdi-navigation-close.right {
 	  position: relative;
