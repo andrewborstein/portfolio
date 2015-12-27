@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio website hosted on github",
+  "main": "index.jade",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a 0.0.0.0 -p 9000 -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewborstein/portfolio.git"
+  },
+  "keywords": [
+    "github",
+    "portfolio",
+    "resume",
+    "andrewborstein.com"
+  ],
+  "author": "andrew borstein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewborstein/portfolio/issues"
+  },
+  "homepage": "https://github.com/andrewborstein/portfolio",
+  "devDependencies": {
+    "connect": "^3.4.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jade-tasks": "0.0.0"
+  }
+}

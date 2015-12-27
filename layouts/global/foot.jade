@@ -1,0 +1,20 @@
+// jQuery
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+// Materialize - Compiled and minified JavaScript
+script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js")
+block scripts
+  script.
+    // Materialize - Initializers
+    $(document).ready(function(){
+      $('.scrollspy').scrollSpy();
+      // Initialize collapse button
+      $(".button-collapse").sideNav({
+          menuWidth: 190, // Default is 240
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+      );
+    });
+block analytics
+  script.
+  // google analytics code, etc...

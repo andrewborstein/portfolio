@@ -27,7 +27,7 @@ nav i {
 	top: 5px;
 }
 main {
-	background: url(http://subtlepatterns.com/patterns/tiny_grid.png);
+	background: url(/static/img/bg.png) repeat;
 	padding-left: 190px;
 }
 ul.side-nav {
@@ -91,7 +91,7 @@ h3 {
 }
 #intro.section {
 	background-size: cover;
-	background: url(img/andrew-borstein2.jpg) no-repeat center center;
+	background: url(/static/img/andrew-borstein2.jpg) no-repeat center center;
 	position: relative;
 }
 #intro.section .container {
@@ -142,7 +142,7 @@ h3 {
 }
 .card h6 {
   font-weight: 300;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   margin-top: 2rem;
   text-transform: uppercase;
 }
