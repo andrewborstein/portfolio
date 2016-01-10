@@ -237,6 +237,7 @@ a.hoverline:hover {
   position: relative;
   top: 2px;
 }
+small { display: none;}
 @media (min-width: 1200px) {
 	#experience .container {
 		width: 860px
