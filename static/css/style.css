@@ -90,8 +90,7 @@ h3 {
 	height: 100vh;
 }
 #intro.section {
-	background-size: cover;
-	background: url(../../static/img/andrew-borstein2.jpg) no-repeat center center;
+	background: url(../../static/img/andrew-borstein2.jpg) no-repeat center center/cover;
 	position: relative;
 }
 #intro.section .container {
