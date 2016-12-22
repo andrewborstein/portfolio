@@ -163,11 +163,14 @@ h3 {
 .card ul {
 	margin-bottom: 0;
 }
-
 .card ul li {
 	line-height: 200%;
 	list-style-type: disc;
 	margin-left: 24px;
+}
+.card ul li li {
+  color: #777;
+  font-size: 13px;
 }
 .card .card-title {
 	font-size: 24px;
