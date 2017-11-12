@@ -1,5 +1,5 @@
 body {
-	color: #444;
+	color: #333;
 	font-size: 16px;
 }
 a {
@@ -12,6 +12,10 @@ blockquote {
 	font-weight: 400;
 	margin: 20px 0;
 	padding-left: 1.5rem;
+}
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
 }
 .text-center {
 	text-align: center;
@@ -72,6 +76,12 @@ li.logo span {
 	display: block;
 	font-size: 14px;
 }
+.brand-logo h1 {
+	font-size: inherit;
+  line-height: inherit;
+  margin: inherit;
+  font-weight: inherit;
+}
 .container {
 	width: 95%
 }
@@ -126,8 +136,14 @@ h3 {
   right: 38px;
   top: 35px;
 }
-.card a {
+.card li a {
 	margin-right: 0;
+	color: #333;
+	border-bottom: 2px solid #ffab40;
+}
+.card li a:hover {
+	color: #333;
+	font-weight: 500;
 }
 .card .card-content {
 	padding-bottom: 30px;
@@ -158,7 +174,7 @@ h3 {
 }
 .card-action span {
 	font-size: 85%;
-	color: #999;
+	color: #666;
 }
 .card ul {
 	margin-bottom: 0;
@@ -169,11 +185,14 @@ h3 {
 	margin-left: 24px;
 }
 .card ul li li {
-  color: #777;
+  color: #666;
   font-size: 13px;
 }
 .card .card-title {
 	font-size: 24px;
+}
+.card .card-content .card-title {
+	line-height: 2.5rem
 }
 .card i.right {
   margin-left: 10px;
@@ -240,6 +259,15 @@ a.hoverline:hover {
   top: 2px;
 }
 small { display: none;}
+.grey-text {
+	color: #666 !important;
+}
+.teal-text {
+	color: #008073 !important
+}
+.teal {
+	background-color: #008073 !important
+}
 @media (min-width: 1200px) {
 	#experience .container {
 		width: 860px
@@ -321,6 +349,11 @@ small { display: none;}
 	section#intro {
 	    margin-bottom: -64px;
 	}
+	.card .role {
+    position: relative;
+    right: initial;
+    top: initial;
+	}
 }
 @media (max-width: 600px) {
 	h2 {
@@ -334,11 +367,6 @@ small { display: none;}
 	.card .card-content .card-title {
     font-size: 20px;
     line-height: 24px;
-	}
-	.card .role {
-    position: relative;
-    right: initial;
-    top: initial;
 	}
 	#experience span.card-title {
     text-align: center;

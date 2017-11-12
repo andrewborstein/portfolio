@@ -2,11 +2,34 @@ section#projects.section.scrollspy
   h3.page-title.white-text.teal Projects
   .container
     .row
+      // BlogSpire
+      .col.s12.m6.l4
+        .card.medium
+          .card-image.waves-effect.waves-block.waves-light
+            img.activator(alt='Screenshot of BlogSpire web app', src='static/img/blogspire.jpg')
+          .card-content
+            span.card-title.activator.teal-text.hoverline BlogSpire
+              i.mdi-navigation-more-vert.right
+            p Blogging web app created for the Engineering team at WeSpire.
+          .card-reveal
+            span.card-title.brown-text Accomplishments
+              i.mdi-navigation-close.right
+            ul
+              li #[strong Ruby on Rails] backend
+              li #[strong Materialize CSS] frontend
+              li User #[strong authentication] via Devise
+              li Implemented #[strong liking functionality]
+              li #[strong Client-side rendering] via AJAX
+            .card-action
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Code Island website', href='https://blogspire.herokuapp.com/', target='_blank', data-position='top', data-tooltip='View Online')
+                i.fa.fa-external-link
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for Code Island project', href='https://github.com/andrewborstein/blogspire', target='_blank', data-position='top', data-tooltip='View Source')
+                i.fa.fa-github
       // Code Island
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/code-island.jpg')
+            img.activator(alt='Code Island logo', src='static/img/code-island.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Code Island
               i.mdi-navigation-more-vert.right
@@ -21,15 +44,15 @@ section#projects.section.scrollspy
               li Refreshed branding and layout
               li Refactored all existing code (#[strong Jekyll])
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://code-island.org', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Code Island website', href='http://code-island.org', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://github.com/andrewborstein/code-island.org', target='_blank', data-position='top', data-tooltip='View Source')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for Code Island project', href='http://github.com/andrewborstein/code-island.org', target='_blank', data-position='top', data-tooltip='View Source')
                 i.fa.fa-github
       // Saved By the Text
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/saved-by-the-text.jpg')
+            img.activator(alt='Zach Morris from Saved by the Bell, on his clunky cell phone', src='static/img/saved-by-the-text.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Saved By the Text
               i.mdi-navigation-more-vert.right
@@ -43,15 +66,15 @@ section#projects.section.scrollspy
               li Designed in #[strong Bootstrap]
               li #[strong Javascript] input validation
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://savedbythetext.herokuapp.com', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Saved By The Test web app', href='http://savedbythetext.herokuapp.com', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://github.com/andrewborstein/saved-by-the-text', target='_blank', data-position='top', data-tooltip='View Source')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for Saved By the Text project', href='http://github.com/andrewborstein/saved-by-the-text', target='_blank', data-position='top', data-tooltip='View Source')
                 i.fa.fa-github
       // Skate Something
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/skate-something.jpg')
+            img.activator(alt='Skate boarder catching air on a half pipe', src='static/img/skate-something.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Skate Something
               i.mdi-navigation-more-vert.right
@@ -65,15 +88,15 @@ section#projects.section.scrollspy
               li Built dynamic templates using #[strong Jade]
               li Worked with #[strong MVC] framework, #[strong Node] server
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://skatesomething.com', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Skate Something web app', href='http://skatesomething.com', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='#', data-position='top', data-tooltip='Source is Private')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for Skate Something project', href='#', data-position='top', data-tooltip='Source is Private')
                 i.fa.fa-github
       // RI WiFi
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/ri-wifi.jpg')
+            img.activator(alt='RI WiFi logo', src='static/img/ri-wifi.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline RI WiFi
               i.mdi-navigation-more-vert.right
@@ -87,15 +110,15 @@ section#projects.section.scrollspy
               li Native Javascript #[strong geolocation]
               li #[strong Dynamic CSS] color coding
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://ri-wifi.herokuapp.com', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit RI WiFi web app', href='http://ri-wifi.herokuapp.com', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://github.com/andrewborstein/ri-wifi', target='_blank', data-position='top', data-tooltip='View Source')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for RI WiFi project', href='http://github.com/andrewborstein/ri-wifi', target='_blank', data-position='top', data-tooltip='View Source')
                 i.fa.fa-github
       // Pinterest
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/pinteresting.jpg')
+            img.activator(alt='Cute kitten', src='static/img/pinteresting.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Pinteresting
               i.mdi-navigation-more-vert.right
@@ -109,15 +132,15 @@ section#projects.section.scrollspy
               li #[strong jQuery] Masonry effect
               li User Authentication with #[strong Devise]
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://asb-pinteresting.herokuapp.com', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Pinteresting web app', href='http://asb-pinteresting.herokuapp.com', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://github.com/andrewborstein/pinteresting', target='_blank', data-position='top', data-tooltip='View Source')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for Pinteresting project', href='http://github.com/andrewborstein/pinteresting', target='_blank', data-position='top', data-tooltip='View Source')
                 i.fa.fa-github
       // Shelter Finder
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/shelter-finder.jpg')
+            img.activator(alt='Screenshot of Google map with pins on it', src='static/img/shelter-finder.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Shelter Finder
               i.mdi-navigation-more-vert.right
@@ -131,15 +154,15 @@ section#projects.section.scrollspy
               li Custom #[strong Google Maps API] integration
               li Automatic location/distance calculation
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://shelterfinder.herokuapp.com', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Sehlter Finder website', href='http://shelterfinder.herokuapp.com', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://github.com/andrewborstein/youth-shelter-finder', target='_blank', data-position='top', data-tooltip='View Source')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for Shelter Finder project', href='http://github.com/andrewborstein/youth-shelter-finder', target='_blank', data-position='top', data-tooltip='View Source')
                 i.fa.fa-github
       // Custom Social Feed
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/chandon.jpg')
+            img.activator(alt='Chandon logo', src='static/img/chandon.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Custom Social Feed
               i.mdi-navigation-more-vert.right
@@ -153,13 +176,13 @@ section#projects.section.scrollspy
               li Matches Chandon's exact branding
               li Built into custom #[strong Tumblr] theme
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://chandonusa.tumblr.com/pour-on-the-fun', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Chandon Tumblr website', href='http://chandonusa.tumblr.com/pour-on-the-fun', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
       // Guestlist Generator
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/guest-list.jpg')
+            img.activator(alt='Header typography for Ryan and Christie wedding site', src='static/img/guest-list.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Guestlist Generator
               i.mdi-navigation-more-vert.right
@@ -173,13 +196,13 @@ section#projects.section.scrollspy
               li Displays styled results on any page
               li Built with #[strong PHP] and #[strong Wordpress] functions
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://ryanandchristieswedding.com/guest-list/', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Wedding Guestlist website', href='http://ryanandchristieswedding.com/guest-list/', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
       // Portfolio Madlibs
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/madlibs.jpg')
+            img.activator(alt='Andrew playfully posing with face half covered by laptop', src='static/img/madlibs.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Portfolio MadLibs
               i.mdi-navigation-more-vert.right
@@ -193,15 +216,15 @@ section#projects.section.scrollspy
               li Pulls from random word array
               li Hours of fun!
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://andrewborstein.github.io/portfolio-madlibs/andrew.html', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Portfolio Madlibs website', href='http://andrewborstein.github.io/portfolio-madlibs/andrew.html', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://github.com/andrewborstein/portfolio-madlibs', target='_blank', data-position='top', data-tooltip='View Source')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for the Portfolio Madlibs project', href='http://github.com/andrewborstein/portfolio-madlibs', target='_blank', data-position='top', data-tooltip='View Source')
                 i.fa.fa-github
       // Cidewalk for Etsy
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/cidewalk.jpg')
+            img.activator(alt='Cidewalk logo', src='static/img/cidewalk.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Cidewalk for Etsy
               i.mdi-navigation-more-vert.right
@@ -214,16 +237,16 @@ section#projects.section.scrollspy
               li Reorganized user process and flow
               li Built with #[strong Angular] and #[strong Bootstrap]
               li
-                a(href='http://app.cidewalk.com') Original &amp;&nbsp;
-                a(href='http://etsy.cidewalk.com') Redesign
+                a(aria-label='', href='http://app.cidewalk.com') Original &amp;&nbsp;
+                a(aria-label='', href='http://etsy.cidewalk.com') Redesign
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='https://etsy.cidewalk.com', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Cidewalk web app', href='https://etsy.cidewalk.com', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
       // Brownborg Studios
       .col.s12.m6.l4
         .card.medium
           .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='static/img/brownborg-studios.jpg')
+            img.activator(alt='Brownborg Studios logo', src='static/img/brownborg-studios.jpg')
           .card-content
             span.card-title.activator.teal-text.hoverline Website Portfolio
               i.mdi-navigation-more-vert.right
@@ -237,5 +260,5 @@ section#projects.section.scrollspy
               li Fully #[strong responsive] designs
               li Unique admin experiences
             .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(href='http://brownborgstudios.com/portfolio', target='_blank', data-position='top', data-tooltip='View Online')
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Brownborg Studios website', href='http://brownborgstudios.com/portfolio', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
