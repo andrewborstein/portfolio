@@ -95,12 +95,13 @@ h3 {
 .section {
 	padding-bottom: 30px;
 	padding-top: 0;
+	position: relative;
 }
 .full-height {
 	height: 100vh;
 }
 #intro.section {
-	background: url(../../static/img/andrew-borstein2.jpg) no-repeat center center/cover;
+	background: url(../../static/img/andrew-borstein-2a.jpg) no-repeat top center/cover;
 	position: relative;
 }
 #intro.section .container {
@@ -121,6 +122,14 @@ h3 {
 }
 #intro.section .teal {
 	padding: 0 10px;
+}
+.overlay {
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 .waves-effect.waves-blue .waves-ripple {
    /* The alpha value allows the text and background color
@@ -389,5 +398,8 @@ small { display: none;}
 	    display: block;
 	    text-align: center;
 	    margin: 0 auto;
+	}
+	#intro.section {
+		background-position-x: 30%;
 	}
 }
