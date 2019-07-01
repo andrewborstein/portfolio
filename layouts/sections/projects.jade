@@ -2,6 +2,28 @@ section#projects.section.scrollspy
   h3.page-title.white-text.teal Projects
   .container
     .row
+      // Interpol8r
+      .col.s12.m6.l4
+        .card.medium
+          .card-image.waves-effect.waves-block.waves-light
+            img.activator(alt='Screenshot of Interpol8r web app', src='static/img/interpol8r.jpg')
+          .card-content
+            span.card-title.activator.teal-text.hoverline Interpol8r
+              i.mdi-navigation-more-vert.right
+            p Experimental web app with homemade recursive string interpolation.
+          .card-reveal
+            span.card-title.brown-text Accomplishments
+              i.mdi-navigation-close.right
+            ul
+              li #[strong Ruby on Rails] backend
+              li #[strong Bulma CSS] frontend
+              li String interpolation via #[strong recursion]
+              li #[strong Dependency free] JS config
+            .card-action
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Interpol8r web app', href='https://interpol8r.herokuapp.com/', target='_blank', data-position='top', data-tooltip='View Online')
+                i.fa.fa-external-link
+              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit the GitHub repo for Interpol8r project', href='https://github.com/andrewborstein/interpol8r', target='_blank', data-position='top', data-tooltip='View Source')
+                i.fa.fa-github
       // BlogSpire
       .col.s12.m6.l4
         .card.medium
@@ -177,26 +199,6 @@ section#projects.section.scrollspy
               li Built into custom #[strong Tumblr] theme
             .card-action
               a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Chandon Tumblr website', href='http://chandonusa.tumblr.com/pour-on-the-fun', target='_blank', data-position='top', data-tooltip='View Online')
-                i.fa.fa-external-link
-      // Guestlist Generator
-      .col.s12.m6.l4
-        .card.medium
-          .card-image.waves-effect.waves-block.waves-light
-            img.activator(alt='Header typography for Ryan and Christie wedding site', src='static/img/guest-list.jpg')
-          .card-content
-            span.card-title.activator.teal-text.hoverline Guestlist Generator
-              i.mdi-navigation-more-vert.right
-            p Automatically converts RSVP submissions into wedding guestlist.
-          .card-reveal
-            span.card-title.brown-text Accomplishments
-              i.mdi-navigation-close.right
-            ul
-              li Simple #[strong Wordpress] shortcode
-              li Pulls data from a customized form
-              li Displays styled results on any page
-              li Built with #[strong PHP] and #[strong Wordpress] functions
-            .card-action
-              a.btn-floating.btn-large.waves-effect.waves-light.brown.tooltipped(aria-label='Visit Wedding Guestlist website', href='http://ryanandchristieswedding.com/guest-list/', target='_blank', data-position='top', data-tooltip='View Online')
                 i.fa.fa-external-link
       // Portfolio Madlibs
       .col.s12.m6.l4
