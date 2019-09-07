@@ -210,7 +210,7 @@
         font-weight: 300;
         letter-spacing: 0.2rem;
         line-height: 1;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         text-transform: uppercase;
       }
       @media (min-width: 30rem) {
@@ -238,6 +238,20 @@
       p a {
         text-decoration: underline;
       }
+      dl {
+        color: #666;
+        margin-bottom: 3rem;
+        margin-top: 0.5rem;
+      }
+      dd {
+        display: inline-block;
+        font-weight: 500;
+        margin-left: 0;
+      }
+      dt {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
       .back-to-index {
         align-content: center;
         display: flex;
@@ -249,6 +263,18 @@
       .back-to-index i {
         margin-right: 0.5rem;
       }
+      dl {
+        margin-top: 0.5rem;
+      }
+      dd {
+        display: inline-block;
+        font-weight: 500;
+        margin-left: 0;
+      }
+      dt {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
     </style>
   </head>
   <body>
@@ -259,6 +285,14 @@
     <main>
       <article>
         <h1>Hello, world. And why I'm blogging.</h1>
+        <dl>
+          <dd>Published:</span>
+          <dt>
+            <time datetime="2019-09-02T00:00:00+00:00">
+              September 2, 2019
+            </time>
+          </dt>
+        </dl>
         <h2 id="tl-dr-">tl: dr;</h2>
         <p>
           This is my first of hopefully more-than-one blog posts. I have high

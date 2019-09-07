@@ -34,6 +34,27 @@ main {
   background: url(../../assets/img/bg.png) repeat;
   padding-left: 190px;
 }
+dl {
+  margin-top: 0.5rem;
+}
+dd {
+  display: inline-block;
+  font-weight: 500;
+  margin-left: 0;
+}
+dt {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+#blog a {
+  font-size: 1.5rem;
+  padding: 0;
+  text-decoration: underline;
+}
+#blog a:hover {
+  background: #009688;
+  color: white;
+}
 ul.side-nav {
   width: 190px;
 }
