@@ -2168,13 +2168,16 @@
     <script>
       let analyticsId
 
-      // If analytics id has not been manually defined
-      if (!analyticsId) {
-        // Initialize GA with Netlify env var
-        getAnalyticsIdFromNetlify().then(initGoogleAnalytics, console.log)
-      } else {
+      // If analytics id has been manually defined
+      if (analyticsId) {
         // Initialize GA with local var
         initGoogleAnalytics(analyticsId)
+      } else {
+        // Initialize GA with Netlify env var available via lamba function
+        fetch("/.netlify/functions/env_vars")
+          .then(getEnvVar)
+          .then(initGoogleAnalytics)
+          .catch(handleError)
       }
 
       // -------------------------------------------------
@@ -2186,15 +2189,14 @@
       }
 
       function getEnvVar(response) {
-        // If the request was successful, return the response text.
-        if (response.ok) return response.text()
-      }
-
-      // Fetch environment variable via Netlify Lambda Function
-      function getAnalyticsIdFromNetlify() {
-        return fetch("/.netlify/functions/env_vars")
-          .then(getEnvVar, handleError)
-          .catch(handleError)
+        // If the request was successful
+        if (response.ok) {
+          // Return the response text
+          return response.text()
+        } else {
+          // Return a rejected Promise object, triggering the .catch()
+          return Promise.reject(response)
+        }
       }
 
       // Set Up Google Analytics
@@ -2208,7 +2210,7 @@
           script.src = analyticsUrl
           ref.parentNode.insertBefore(script, ref)
 
-          // Intitlize Google Analytics
+          // Initialize Google Analytics
           window.dataLayer = window.dataLayer || []
           function gtag() {
             dataLayer.push(arguments)
