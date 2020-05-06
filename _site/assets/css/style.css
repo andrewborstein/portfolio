@@ -55,6 +55,10 @@ dt {
   background: #009688;
   color: white;
 }
+#blog ol {
+  list-style-type: none;
+  padding: 0;
+}
 ul.side-nav {
   width: 190px;
 }
