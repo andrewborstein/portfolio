@@ -5,6 +5,8 @@ Tools used to build this website (first created in 2015, with only minor content
 - [Materialize](https://materializecss.com) - a super handy CSS framework to get Google's Material Design components and style
 - And a bunch of custom CSS to get it looking just right.
 
-## Note
+## Notes
+- You can use this as template for your own portfolio site! Seriously, have at it. In the future I hope to turn it into a proper template so anyone can easily install and modify it for their own usage. 
 - I recently removed Grunt as a build tool dependency and moved my site hosting to Netlify. All files are completely static (for the time being), but they also live in a `/public` folder instead of the root. If you don't use Netlify, feel free to move everything back into the  root folder instead.
 - Make sure to set `analyticsId` to your unique GA account id inside the `Google Analytics` script tag at the bottom of the `<body>`, if you want to use your own Google Analytics account.
+
