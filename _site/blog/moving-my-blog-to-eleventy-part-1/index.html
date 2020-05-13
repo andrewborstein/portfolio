@@ -161,7 +161,7 @@
   }
   img {
     max-width: 100%;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
   }
   @media (min-width: 30rem) {
     article {
@@ -243,7 +243,6 @@
     color: #ccc;
     font-size: 1rem;
     padding: 2rem;
-    white-space: pre-line;
   }
   p code {
     background: #ddd;
@@ -264,6 +263,12 @@
     <h1>Moving my blog to Eleventy, Part 1: Installing Node with NVM</h1>
 <h2>tl:dr;</h2>
 <p>Apparently writing <a href="/blog/hello-world-and-why-im-blogging">my first blog post</a> wasn't enough to kick my butt into high blogging gear. Two posts per year isn't quite the clip I was hoping for! So my new plan is to make it so easy to write, publish, and manage content that I have no excuse but to do it more often. Follow along as I try to get <a href="https://www.11ty.dev/#quick-start">step 1 of the Eleventy docs</a> working, but instead spend an entire night installing <a href="https://nodejs.org/en/">Node</a>.</p>
+<p>View all posts in this Eleventy series:</p>
+<ul>
+<li><a href="/blog/moving-my-blog-to-eleventy-part-1/">Part 1: Installing Node with NVM</a></li>
+<li><a href="/blog/moving-my-blog-to-eleventy-part-2/">Part 2: Getting Started</a></li>
+</ul>
+<hr>
 <h2>Preface: Bring on the hot mess</h2>
 <p>Truth be told, I am genuinely apprehensive about updating the tech stack of my portfolio site. I've been burned before. <a href="https://github.com/andrewborstein/portfolio/commit/58cdef4c1388d9b7a7f64339db750dca5a60f928#diff-595bf3fa2348192244b0319be33066b8">An earlier version of this site</a> was built in 2015 using <a href="http://jade-lang.com/">Jade</a> for templating and <a href="https://gruntjs.com/">Grunt</a> for compiling the assets. At some point the compilation totally broke and I didn't feel like investing the time to figure out why. The same thing happened with <a href="http://savedbythetext.herokuapp.com/">a small Rails app that I built</a> around the same time. I left it alone and one day POOF it stopped working. It was easier to rebuild the entire thing from scratch than to update all the dependencies and libraries. But even now, completely rebuilt, it's a ticking time bomb. I'm just biding my time until it fails again.</p>
 <p>If you're new to web development, let me disabuse you of any misconceptions to the contrary: this is par for the course. The entire web is in a constant state of decay, some parts degrading more quickly than others. If you build something and then simply wait... eventually, it will break. It's just a matter of time! The few things that don't break should be considered exceptions to the rule and can be counted on two hands (kudos, <a href="https://www.spacejam.com/">Space Jam</a>).</p>
@@ -360,6 +365,11 @@ v14.0.0
 <p>During this process I am <em>constantly</em> reminded about the fragility of what I'm building. What if I want to leave this site alone and revisit in a year, and the latest stable and secure version of Node is now v15 instead of v14? Will everything be broken? Will there be urgent security vulnerabilities? What sort of Herculean effort will be required just to work on my simple blog site if I <em>gasp</em> get a new laptop?? For now, I'm filing those away as &quot;future me&quot; problems. Experimentation! Learning! <code>wind.push(caution)</code>. Ugh, that's corny.</p>
 <p>Ok back to the main event, Eleventy. What could go wrong? I'm as curious as you are. Come back sometime in the nearish future (hopefully next week) — for Part 2 of this series — to find out.</p>
 
+    <hr>
+    <p>
+      <a href="mailto:andrew@andrewborstein.com">Email me</a> anytime to offer
+      feedback, ask questions, or just say hello 👋.
+    </p>
   </article>
 </main>
 

@@ -9,6 +9,12 @@ description: "Follow along as I fail to get step 1 of the Eleventy docs working,
 
 Apparently writing [my first blog post](/blog/hello-world-and-why-im-blogging) wasn't enough to kick my butt into high blogging gear. Two posts per year isn't quite the clip I was hoping for! So my new plan is to make it so easy to write, publish, and manage content that I have no excuse but to do it more often. Follow along as I try to get [step 1 of the Eleventy docs](https://www.11ty.dev/#quick-start) working, but instead spend an entire night installing [Node](https://nodejs.org/en/). 
 
+View all posts in this Eleventy series:
+- [Part 1: Installing Node with NVM](/blog/moving-my-blog-to-eleventy-part-1/) 
+- [Part 2: Getting Started](/blog/moving-my-blog-to-eleventy-part-2/) 
+
+* * *
+
 ## Preface: Bring on the hot mess
 
 Truth be told, I am genuinely apprehensive about updating the tech stack of my portfolio site. I've been burned before. [An earlier version of this site](https://github.com/andrewborstein/portfolio/commit/58cdef4c1388d9b7a7f64339db750dca5a60f928#diff-595bf3fa2348192244b0319be33066b8) was built in 2015 using [Jade](http://jade-lang.com/) for templating and [Grunt](https://gruntjs.com/) for compiling the assets. At some point the compilation totally broke and I didn't feel like investing the time to figure out why. The same thing happened with [a small Rails app that I built](http://savedbythetext.herokuapp.com/) around the same time. I left it alone and one day POOF it stopped working. It was easier to rebuild the entire thing from scratch than to update all the dependencies and libraries. But even now, completely rebuilt, it's a ticking time bomb. I'm just biding my time until it fails again.
