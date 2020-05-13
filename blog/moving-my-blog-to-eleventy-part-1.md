@@ -1,6 +1,7 @@
 ---
 layout: layouts/blog
 title: "Moving my blog to Eleventy, Part 1: Installing Node with NVM"
+description: "Follow along as I fail to get step 1 of the Eleventy docs working, and instead spend an entire night installing Node."
 ---
 # {{ title }}
 

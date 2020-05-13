@@ -1,6 +1,7 @@
 ---
 layout: layouts/blog
 title: Hello, world. And why I'm blogging.
+description: This is my first of hopefully more-than-one blog posts.
 ---
 # {{ title }}
 
