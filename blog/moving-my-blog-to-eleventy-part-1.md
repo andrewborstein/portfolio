@@ -10,8 +10,9 @@ description: "Follow along as I fail to get step 1 of the Eleventy docs working,
 Apparently writing [my first blog post](/blog/hello-world-and-why-im-blogging) wasn't enough to kick my butt into high blogging gear. Two posts per year isn't quite the clip I was hoping for! So my new plan is to make it so easy to write, publish, and manage content that I have no excuse but to do it more often. Follow along as I try to get [step 1 of the Eleventy docs](https://www.11ty.dev/#quick-start) working, but instead spend an entire night installing [Node](https://nodejs.org/en/). 
 
 View all posts in this Eleventy series:
-- [Part 1: Installing Node with NVM](/blog/moving-my-blog-to-eleventy-part-1/) 
-- [Part 2: Getting Started](/blog/moving-my-blog-to-eleventy-part-2/) 
+- [Part 1: Installing Node with NVM](/blog/moving-my-blog-to-eleventy-part-1/)
+- [Part 2: Getting Started](/blog/moving-my-blog-to-eleventy-part-2/)
+- [Part 3: Creating Layouts](/blog/moving-my-blog-to-eleventy-part-3/)
 
 * * *
 

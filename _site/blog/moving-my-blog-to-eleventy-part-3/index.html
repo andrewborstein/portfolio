@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Materialize - Compiled and minified CSS-->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
+    />
+    <!-- Font Awesome Icon - CSS-->
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <title>Moving my blog to Eleventy, Part 3: Creating Layouts</title>
+    <!-- Open Graph-->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Moving my blog to Eleventy, Part 3: Creating Layouts" />
+    <meta property="og:description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout." />
+    <meta property="og:url" content="andrewborstein.com" />
+    <meta property="og:site_name" content="Moving my blog to Eleventy, Part 3: Creating Layouts" />
+    <meta property="article:publisher" content="andrewborstein.com" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@andrewarei" />
+    <meta name="twitter:title" content="Moving my blog to Eleventy, Part 3: Creating Layouts" />
+    <meta name="twitter:description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout." />
+    <meta name="twitter:url" content="andrewborstein.com" />
+    <meta name="author" content="Andrew Borstein" />
+    <meta name="description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout." />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/assets/img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/assets/img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/assets/img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/img/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/assets/img/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!--if lt IE 9script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+	-->
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
+    
+<!-- Custom Styles-->
+<style>
+  /* Blog Styles */
+  body {
+    color: #333;
+    font-size: 16px;
+  }
+  a {
+    color: #009688;
+  }
+  blockquote {
+    border-left: 5px solid #795548;
+    color: #795548;
+    font-size: 125%;
+    font-weight: 400;
+    margin: 20px 0;
+    padding-left: 1.5rem;
+  }
+  blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .text-center {
+    text-align: center;
+  }
+  nav {
+    background: white;
+    box-shadow: none;
+    height: 0;
+  }
+  nav i {
+    padding: 0 15px;
+    position: relative;
+    top: 5px;
+  }
+  main {
+    background: url(/assets/img/bg.png) repeat;
+  }
+  article {
+    max-width: 85ch;
+    margin: 0 auto;
+    padding: 2rem;
+    font-size: 100%;
+    line-height: 1.6;
+  }
+  img {
+    max-width: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  }
+  @media (min-width: 30rem) {
+    article {
+      font-size: 120%;
+    }
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  @media (min-width: 30rem) {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+  h2 {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  hr {
+    margin: 4rem 0;
+  }
+  ul {
+    padding-left: 1em;
+  }
+  ul li {
+    list-style-type: initial;
+  }
+  p a {
+    text-decoration: underline;
+  }
+  dl {
+    color: #666;
+    margin-bottom: 3rem;
+    margin-top: 0.5rem;
+  }
+  dd {
+    display: inline-block;
+    font-weight: 500;
+    margin-left: 0;
+  }
+  dt {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  .back-to-index {
+    align-content: center;
+    display: flex;
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+  }
+  .back-to-index i {
+    margin-right: 0.5rem;
+  }
+  dl {
+    margin-top: 0.5rem;
+  }
+  dd {
+    display: inline-block;
+    font-weight: 500;
+    margin-left: 0;
+  }
+  dt {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  pre {
+    background-color: #222;
+    color: #ccc;
+    font-size: 1rem;
+    padding: 2rem;
+  }
+  p code {
+    background: #ddd;
+    border: 0.25rem solid #ddd;
+    border-left-width: 0.5rem;
+    border-right-width: 0.5rem;
+    color: #eb5757;
+    font-size: 0.9em;
+  }
+</style>
+<a class="back-to-index" href="/#blog">
+  <i class="mdi-hardware-keyboard-arrow-left"></i>
+  Back to blog index
+</a>
+<!-- Main Content-->
+<main>
+  <article>
+    <h1>Moving my blog to Eleventy, Part 3: Creating Layouts</h1>
+<h2>tl:dr;</h2>
+<h3>Black lives matter</h3>
+<p>Last time around I had just published <a href="http://localhost:8080/blog/moving-my-blog-to-eleventy-part-2/">the second blog post in as many weeks</a>. Then a global pandemic took more than 100,000 lives in the U.S. and George Floyd was murdered by police and my blog didn't feel so important anymore.</p>
+<p>I've found it really challenging to know exactly what to do or say. So I've been trying to spend more of my energy on listening, learning, donating, and advocating. To that end, here are some resources I have found really useful or am currently working through:</p>
+<ul>
+<li><strong>Organizations</strong>: <a href="https://www.showingupforracialjustice.org/">Showing Up for Racial Justice</a> &amp; <a href="https://eji.org/">Equal Justice Initiative</a></li>
+<li><strong>Books</strong>: <a href="https://www.penguinrandomhouse.com/books/220290/between-the-world-and-me-by-ta-nehisi-coates/">Between the World &amp; Me</a> &amp; <a href="https://www.ibramxkendi.com/stamped-from-the-beginning">Stamped From the Beginning</a></li>
+<li><strong>Opinion</strong>: <a href="https://www.theconsciouskid.org/">The Conscious Kid</a></li>
+</ul>
+<p>If you're not already, I encourage you to work towards becoming actively anti-racist. Any amount of effort counts and our friends and neighbors are counting us.</p>
+<h3>Creating a blog layout</h3>
+<p>By the end of this post we'll have walked through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout. In fact, this blog post was (finally) written in markdown and compiled using Eleventy.</p>
+<p>View all posts in this Eleventy series:</p>
+<ul>
+<li><a href="/blog/moving-my-blog-to-eleventy-part-1/">Part 1: Installing Node with NVM</a></li>
+<li><a href="/blog/moving-my-blog-to-eleventy-part-2/">Part 2: Getting Started</a></li>
+<li><a href="/blog/moving-my-blog-to-eleventy-part-3/">Part 3: Creating Layouts</a></li>
+</ul>
+<hr>
+<h2>Preface: Assessing where we are and making a plan</h2>
+<h3>What we've done so far</h3>
+<p>Up to this point I've done the following:</p>
+<ol>
+<li>Install Node on the personal user account on my work laptop</li>
+<li>Follow Eleventy's <a href="https://www.11ty.dev/#quick-start">Quick Start</a> guide and an abridged version of their <a href="https://www.11ty.dev/docs/getting-started/">Getting Started</a> guide.</li>
+</ol>
+<p>My dev environment is all set up, Eleventy is now successfully installed, my website is now being powered by it locally. So what's next?</p>
+<h3>Command line usage? Already know enough.</h3>
+<p>If we simply move on to the next step the Eleventy docs, I'm directed to view some basic <a href="https://www.11ty.dev/docs/usage/">Eleventy  Command Line usage</a>, including <code>$ npx @11ty/eleventy</code> and <code>$ npx @11ty/eleventy --serve</code>, which we've already used. A quick perusal suggests I already know enough commands to get by and <code>$ npx @11ty/eleventy --help</code> can fill in the blanks in a pinch.</p>
+<p>Onward.</p>
+<h3>Starter projects? A little too heavy.</h3>
+<p>Next in the docs are <a href="https://www.11ty.dev/docs/starter/">some Eleventy starter projects</a>. Wow! 21 of them. Let's scan the descriptions for a few minutes... <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Web accessibility</a> is something I've been steadfastly focusing on for the last few years and I'd consider it a non-negotiable for the new version of my website. When I <a href="https://en.wikipedia.org/wiki/Grep#Usage_as_a_verb">grep</a> the page for the word &quot;accessible&quot; I find the one match, the <a href="https://hylia.website/">Hylia template</a>. I've actually used it before, on <a href="https://andrewandmeredith.com/">my still-in-progress wedding website</a> (for a wedding that has sadly been postponed due to global pandemic).</p>
+<p>I like the template a lot, but it's way heavier than I want to start with in terms of eleventy configuration, layout, and style. I want to go as bare bones as possible, and build from the ground up. Maybe I'll get back to that template at some point, but I'd rather be familiar with all the pieces by time I do.</p>
+<p>Moving ahead.</p>
+<h3>Tutorials? Promising but slow.</h3>
+<p>The last page in the docs features some <a href="https://www.11ty.dev/docs/tutorials/">Eleventy tutorials</a>. The one called <a href="https://www.filamentgroup.com/lab/build-a-blog/">Build your own blog from scratch using Eleventy</a> sounds right up my alley. Plus it's written by Zach Leatherman (he built Eleventy!) and posted to Filament Group (they are awesome and trustworthy). Let's take a quick gander at that and see if it looks promising...</p>
+<p>OK, I perused it and feel like I'm ready to make the jump straight to the docs instead. He's already talking about Layouts and he links often to the <a href="https://www.11ty.dev/docs/layouts/">Eleventy layout docs</a>, anyhow. I'm itching to keep building, and don't want to fall down a tutorial rabbit hole.</p>
+<p>Further into the official docs we go!</p>
+<h2>Layouts: Creating basic website and blog templates</h2>
+<h3>Step 1: Choose a templating language</h3>
+<p>This is not technically the first step in the Eleventy docs. I've heard from other folks that the Eleventy docs leave something to be desired. I'm not done with them yet, but I already feel like they could be better organized. This might be one example.</p>
+<p>The docs jump straight <a href="https://www.11ty.dev/docs/layouts/">creating layouts</a>, but their first example uses <code>mylayout.njk</code> and just below it they explain:</p>
+<blockquote>
+<p>You can use any template language in your layout—it doesn’t need to match the template language of the content. An <code>ejs</code> template can use a <code>njk</code> layout, for example.</p>
+</blockquote>
+<p>Woah, woah, woah — what are <code>njk</code> aNd <code>ejs</code> referring to? I can infer they are templating languages, but... how do you choose one? And how many are there to choose from?? And how do I know if I've made the right choice??? (╯°□°)╯︵ ┻━┻</p>
+<p>Getting stuck on unimportant details is a bad habit of mine. I want to choose the right templating language! This is supposed to be a fun, personal project, so might as well indulge myself a bit.</p>
+<p>Fast forward — after plenty of unnecessary but predictably unavoidable hemming and hawing about which templating language to use (and about 20 min of Googling things like &quot;best JS templating language&quot; and &quot;nunjucks vs liquid vs handlebars&quot;), I'm settling on <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> because <a href="https://www.mozilla.org/en-US/">Mozilla</a> makes it and I trust them. <a href="https://github.com/hankchizljaw/hylia/blob/master/src/_includes/layouts/base.njk">The Hylia template also uses Nunjucks</a> and <a href="https://css-tricks.com/killer-features-of-nunjucks/">CSS-Tricks seems to be fond of Nunjucks</a>, too. Good enough for me!</p>
+<h3>Quick Aside: The Power of Asking Questions</h3>
+<p>PSA: If you don't understand something, ask about it! Phone a friend. Do some Googling. Watch a Youtube video. Read an article. Eat a cookie. Whatever you need to do to pause and get some extra understanding, just do it. It's totally fine if you don't know how everything works.</p>
+<p>The idea that senior developers simply have more rote knowledge stored in their brains than junior developers is a total myth. You absolutely do build up some <em>wisdom</em> over time, and those hard-won instincts help you make better decisions. But mostly you get better at asking and questions and finding answers.</p>
+<p>I was curious about how to choose a template language for my blog, so I took some time to learn!</p>
+<p>On to the next task.</p>
+<h3>Step 2: Clean up the folder structure</h3>
+<p><strong>Note</strong>: this next section may not apply to you if you're working with a new project from scratch.</p>
+<p>I'm kinda of annoyed dealing with this <code>public/</code> folder right now. It's a remnant of how my site used to be built, before Eleventy. Now that Eleventy will automatically parse my root folder and move files into the <code>_site</code> folder when compiled, I don't need to nest everything inside <code>public/</code>.</p>
+<p>Firstly, I'll run run the Eleventy watch command, so it will listen for changes to my site and then automatically compile files based on those changes.</p>
+<pre><code class="language-bash">$ npx @11ty/eleventy --watch
+Writing _site/README/index.html from ./README.md.
+Writing _site/public/index.html from ./public/index.html.
+Writing _site/public/blog/hello-world-and-why-im-blogging/index.html from ./public/blog/hello-world-and-why-im-blogging.html.
+Writing _site/public/resume/index.html from ./public/resume/index.html.
+Wrote 4 files in 0.09 seconds (v0.11.0)
+Watching…
+</code></pre>
+<p>Now I'm going to move all the files out of the <code>public/</code> folder</p>
+<pre><code>pulbic/
+  blog/
+    hello-world-and-why-im-blogging.html
+</code></pre>
+<p>and into the top-level root folder.</p>
+<pre><code>blog/
+  hello-world-and-why-im-blogging.html
+</code></pre>
+<p>Eleventy automatically compiles my files for me and tosses them into <code>_site</code>, like magic. 🎉</p>
+<pre><code class="language-html">_site/
+  blog/
+    hello-world-and-why-im-blogging
+      index.html
+blog/
+  hello-world-and-why-im-blogging.html
+</code></pre>
+<p>But, it also leaves the old files behind. Meaning I now have two copies of all my compiled files — one under <code>/_site</code> and another under <code>/_site/public</code>. 🤔</p>
+<pre><code class="language-html">_site/
+  blog/ ⬅️
+    hello-world-and-why-im-blogging
+      index.html
+  public/
+    assets/
+    blog/ ⬅️
+      hello-world-and-why-im-blogging
+        index.html
+blog/
+  hello-world-and-why-im-blogging.html
+</code></pre>
+<p>I'm a little curious about why this is, but not so much that I'm going to dive really deep into Eleventy docs or the source code. My guess is that it's just safer and simpler to compile files when it sees them, exactly as it sees them, and nothing more. In other words, don't blow away the entire <code>_site</code> folder during each compilation, because that would be expensive and maybe even dangerous. Just compile the files that changed. And if there's a conflict, well maybe Eleventy will warn me about it.</p>
+<p>My guess is that if I simply delete the entire <code>_site</code> folder, then re-run <code>$ eleventy</code> I'll be good to go. BUT I've already moved my static <code>assets/</code> folder in there and definitely don't want to lose that. Good thing the entire <code>_site/</code> folder isn't blown away during every compile or else it would have deleted my entire <code>/assets</code> folder! There ya go, danger confirmed.</p>
+<p>For now, I'll do 2 things:</p>
+<ol>
+<li>Manually move <code>assets/</code> from <code>_site/public/</code> to <code>_site/</code></li>
+</ol>
+<pre><code class="language-html">_site/
+  assets/ ⬅️
+  blog/
+    hello-world-and-why-im-blogging
+      index.html
+  public/
+    blog/
+      hello-world-and-why-im-blogging
+        index.html
+blog/
+  hello-world-and-why-im-blogging.html
+</code></pre>
+<ol start="2">
+<li>Delete the <code>_site/public/</code> folder</li>
+</ol>
+<pre><code class="language-html">_site/
+  assets/
+  blog/
+    hello-world-and-why-im-blogging
+      index.html
+blog/
+  hello-world-and-why-im-blogging.html
+</code></pre>
+<p>Much better! This is what my entire site directory looks like now.</p>
+<pre><code class="language-html">_site/
+  assets/...
+  blog/...
+  README/...
+  resume/...
+  index.html
+blog/...
+netlify_functions/...
+node_modules/...
+resume/...
+.gitignore
+CNAME
+index.html
+netlify.toml
+package-lock.json
+package.json
+README.md
+</code></pre>
+<p>OK, now we've got a totally reasonable setup, given this new Eleventy tech stack. And, even better, it all works at <a href="http://localhost:8080/">http://localhost:8080/</a> now instead of <a href="http://localhost:8080/">http://localhost:8080/public</a>. After all these changes, the <code>_site/</code> folder is equivalent to the entire website that users will see. Everything outside of it is what we'll be using to <em>build</em> that site.</p>
+<p>Let's make some ding dang templates already!</p>
+<h3><strong>Step 3: Create an example blog post</strong></h3>
+<p>I'm going to start by copy-ing <a href="https://andrewborstein.com/blog/hello-world-and-why-im-blogging.html">my first blog post</a> into a new markdown file. I eventually want all of my blog posts to be markdown because <a href="https://guides.github.com/features/mastering-markdown/">I find it <em>much</em> easier to write in markdown</a>. I'm writing this very blog post in <a href="https://notion.so/">Notion</a>, which is supports markdown composition and super easy exporting. So even though this file already exists in HTML, I'm going to convert the contents of it to markdown as an experiment, to see if Eleventy can successfully convert it back to HTML. That's the workflow I expect for all future blog posts, markdown to HTML.</p>
+<p>To accomplish this conversion, I googled &quot;HTML to markdown&quot; and found <a href="https://domchristie.github.io/turndown/">Turndown</a>, which after a single copy-paste worked swimmingly. When I run <code>npx @11ty/eleventy --watch</code>, change my original <code>.html</code> file to a <code>.md</code> file filled with blog post markdown, and save it — BOOM, Eleventy saw my markdown file, compiled it into HTML, and tossed it into in the <code>_site</code> directory as <code>index.html</code>. So cool!</p>
+<pre><code class="language-html">_site/
+  blog/
+    hello-world-and-why-im-blogging
+      index.html
+blog/
+    hello-world-and-why-im-blogging.md ⬅️
+</code></pre>
+<p>My website is still serving an HTML file, but it's now being compiled from markdown instead of from HTML. One thing that's different for users is that the old blog post was available at <code>...why-im-blogging.html</code> and this one is available at <code>...why-im-blogging</code>. That's actually a much better (and common) URL pattern, one that doesn't require <code>.html</code> at the end, so win-win.</p>
+<p>Inside the blog post, what used to be HTML</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world. And why I'm blogging.&lt;/h1&gt;
+    &lt;h2&gt;tl: dr;&lt;/h2&gt;
+    &lt;p&gt;This is my first of hopefully more-than-one blog posts...&lt;/p&gt;
+</code></pre>
+<p>has now become markdown.</p>
+<pre><code class="language-markdown"># Hello, world. And why I'm blogging.
+
+## tl: dr;
+
+This is my first of hopefully more-than-one blog posts...
+</code></pre>
+<p>But you may notice that my markdown doesn't contain anything about the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code>. That's because markdown isn't a good place for that. Markdown is for content, not layout. And that's the whole point of using a templating system like Eleventy! Write my content in markdown and wrap it in layouts using an HTML-like templating language. I want to be able to simply write the <em>content</em> of my posts in markdown, and have the entire blog post layout be automatically created around it.</p>
+<p>I haven't built the blog <em>layout</em> yet, so my site is kind of a mess right now!</p>
+<p><img src="screenshot-blog-post-no-css.jpg" alt="screenshot of this blog post hosted locally, with no CSS styling at all"></p>
+<p>There's no <code>&lt;head&gt;</code> yet, containing all my stylesheets and other important styling and SEO stuff. Just some good ol' vanilla HTML blog post content. It's rather austere. Let's change that.</p>
+<h3>Step 4: Add front matter</h3>
+<p>Here comes the fun part: <a href="https://www.11ty.dev/docs/data-frontmatter/">Front Matter</a>. I'm not exactly sure why it's called that, but it's basically just data. Sort of like a fixed set of variables that we can use in our templates. And a simple way to start adding it is by including a <code>title</code> in between the two sets of <code>---</code>.</p>
+<pre><code class="language-markdown">---
+title: Hello, world. And why I'm blogging.
+---
+
+# Moving my blog to Eleventy, Part 3: Creating Layouts
+
+## tl: dr;
+
+This is my first of hopefully more-than-one blog posts...
+</code></pre>
+<p>After saving the file, Eleventy automatically compiles again and the HTML output is exactly the same! The &quot;handlebars&quot; syntax of <code>Moving my blog to Eleventy, Part 3: Creating Layouts</code> is interpolated by Eleventy and converted into the value of the <code>title</code> front matter that's set at the top of the file.</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">---
+title: Hello, world. And why I'm blogging.
+---
+
+# Moving my blog to Eleventy, Part 3: Creating Layouts
+</code></pre>
+<p>Compiled HTML:</p>
+<pre><code class="language-html">&lt;h1&gt;Hello, world. And why I'm blogging.&lt;/h1&gt;
+</code></pre>
+<p>This may not seem that valuable yet, but we'll learn more about why it is as we move further along. Let's try something more interesting, like adding a <code>layout</code>, as the Eleventy docs encourage.</p>
+<pre><code class="language-markdown">---
+layout: myLayout.njk
+title: Hello, world. And why I'm blogging.
+---
+
+# Moving my blog to Eleventy, Part 3: Creating Layouts
+</code></pre>
+<p><a href="https://www.11ty.dev/docs/layouts/">According to the docs</a>, Eleventy will look for a file called <code>myLayout.njk</code> inside an <code>_includes/</code> folder in the root of your website directory. If this folder doesn't exist, we encounter a problem:</p>
+<pre><code class="language-bash">$ eleventy
+Problem writing Eleventy templates: (more in DEBUG output)
+&gt; TemplateLayoutPathResolver directory does not exist for myLayout.njk: _includes
+
+`Error` was thrown:
+    Error: TemplateLayoutPathResolver directory does not exist for myLayout.njk: _includes
+</code></pre>
+<p>No surprise there! I haven't created that layout file yet, or the <code>_includes/</code> folder. So I'll do that now.</p>
+<p>I expect to have lots of different types of layouts for not just things like blog posts, but also for individual resume blocks or portfolio links or skill items etc. So I'll create a folder just for high level layouts i.e. document wrappers inside a folder called <code>layouts/</code>. To start I'd like to have one layout for my blog posts, so that I can just write the content and the rest of the page will automatically be included.</p>
+<pre><code class="language-markdown">---
+layout: layouts/blog.njk ⬅️
+title: Hello, world. And why I'm blogging.
+---
+
+# Moving my blog to Eleventy, Part 3: Creating Layouts
+</code></pre>
+<p>This is nice, but the docs also mention that you don't have to specify a file type for your layouts! So you can always change your mind later, e.g. move from <code>layouts/blog.njk</code> to <code>layouts/blog.ejs</code>. And if you leave off the file type from the front matter, that switch will be super easy. I like that flexibility, so that's why I'm leaving <code>.njk</code> off.</p>
+<pre><code class="language-markdown">---
+layout: layouts/blog ⬅️
+title: Hello, world. And why I'm blogging.
+---
+
+# Moving my blog to Eleventy, Part 3: Creating Layouts
+</code></pre>
+<h3>Step 5: Add a layout file to the <code>_includes</code> folder</h3>
+<p>As soon as I hit save on the post I've made, I get a helpful error from Eleventy!</p>
+<pre><code class="language-bash">Watching…
+File changed: public/blog/hello-world-and-why-im-blogging.md
+Problem writing Eleventy templates: (more in DEBUG output)
+&gt; TemplateLayoutPathResolver directory does not exist for layouts/blog: _includes
+
+`Error` was thrown:
+    Error: TemplateLayoutPathResolver directory does not exist for layouts/blog: _includes
+</code></pre>
+<p>It's way ahead of me. I specified a layout file, but haven't actually created it yet. I'll add a file here</p>
+<pre><code>_includes/
+  layouts/
+    blog.njk ⬅️
+</code></pre>
+<p>that contains a very simple HTML wrapper (taken from the 11ty docs)</p>
+<pre><code class="language-html">---
+title: Andrew Borstein | Full-Stack Front-End Developer
+---
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;{{ title }}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {{ content | safe }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Then my local server automatically sees it (it's in <code>--watch</code> mode) and writes a new version of the blog html file!</p>
+<pre><code class="language-bash">Watching…
+File changed: _includes/layouts/blog.njk
+Writing _site/README/index.html from ./README.md.
+Writing _site/public/index.html from ./public/index.html.
+Writing _site/public/blog/hello-world-and-why-im-blogging-orig/index.html from ./public/blog/hello-world-and-why-im-blogging-orig.html.
+Writing _site/public/resume/index.html from ./public/resume/index.html.
+Writing _site/public/blog/hello-world-and-why-im-blogging/index.html from ./public/blog/hello-world-and-why-im-blogging.md.
+Wrote 5 files in 0.03 seconds (v0.10.0)
+Watching…
+</code></pre>
+<p>You may have noticed that my <code>title</code> in the <code>blog.njk</code> file is different than the one in my actual blog post. That's because front matter cascades, kind of like CSS. The value I set in the layout file will be the default, and if I set one in the blog post it will override the default.</p>
+<p>Using one <code>title</code> attribute also provides the convenient advantage of letting me set the front matter once and use it in multiple places. Every file in this cascade of templates that uses the <code>title</code> data will return whatever the final value is. In practice that means both the layout <code>&lt;title&gt;</code> and the blog post <code>&lt;h1&gt;</code> will be set to &quot;Hello world, and why I'm blogging&quot;, even though the default value is &quot;Andrew Borstein | Full-Stack Front-End Developer&quot;. It's also a good practice in general to sync your document title and the h1 on a given page.</p>
+<p>My blog post now has a basic (but totally legit) wrapper! I'm using templates again, wow, what a relief. I haven't yet ported over my actual website template, or fancy features like linkable headings, or other accessibility enhancements. I'll come back to that.</p>
+<h3>Step 5: Finish the layouts</h3>
+<p>For now, I know that my blog post template will be slightly different than my website page template, and that both will probably extend one base template. Given that, I'll actually change <code>blog.njk</code> to <code>base.njk</code>.</p>
+<pre><code>_includes/
+  layouts/
+    base.njk ⬅️
+</code></pre>
+<p>For the moment, my blog post will be broken because I'm still telling it to look for <code>layouts/blog</code> in the front matter. But I can quickly create a new blog layout that extends (&quot;chains&quot;, in Eleventy terms) the base layout.</p>
+<pre><code>_includes/
+  layouts/
+    base.njk
+    blog.njk ⬅️
+</code></pre>
+<pre><code class="language-html">---
+layout: layouts/base
+---
+&lt;a class=&quot;back-to-index&quot; href=&quot;/#blog&quot;&gt;
+  Back to blog index
+&lt;/a&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    {{ content | safe }}
+  &lt;/article&gt;
+&lt;/main&gt;
+</code></pre>
+<p>Note that the <code>blog</code> layout itself uses the <code>base</code> layout via <code>layout: layouts/base</code>. The two are chained together, so now when I set <code>layout: layouts/blog</code> in my blog post:</p>
+<ol>
+<li>The blog post will use the blog layout</li>
+<li>The blog layout will use the base layout</li>
+</ol>
+<p>In other words the chain is <code>base layout</code> ⇒ <code>blog layout</code> ⇒ <code>post</code>. Putting everything we've done so far together renders the following HTML, auto-magically:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width initial-scale=1&quot; /&gt;
+    &lt;title&gt;Hello, world. And why I'm blogging.&lt;/title&gt;
+  &lt;head&gt;
+  &lt;body&gt;
+    &lt;a class=&quot;back-to-index&quot; href=&quot;/#blog&quot;&gt;
+      Back to blog index
+    &lt;/a&gt;
+    &lt;main&gt;
+      &lt;article&gt;
+        &lt;h1&gt;Hello, world. And why I'm blogging.&lt;/h1&gt;
+      &lt;/article&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Awesome! My site still looks pretty terrible, so let's add back the missing stylesheets to our <code>base</code> layout. While we're there let's add a <code>description</code> for better SEO and share-ability and include JS needed for the <a href="https://materializecss.com/">Materialize framework</a> I'm currently using (but hoping to deprecate very soon).</p>
+<pre><code class="language-html">---
+description: I want to make things that make a difference.
+title: Andrew Borstein | Full-Stack Front-End Developer
+---
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;!-- Metadata --&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Moving my blog to Eleventy, Part 3: Creating Layouts&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout.&quot; /&gt;
+    &lt;!-- CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;...materialize.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;...font-awesome.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/style.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {{ content | safe }}
+    &lt;!-- Javascript --&gt;
+    &lt;script src=&quot;...jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;...materialize.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>And if I want some custom styles just on blog pages (I do!), I can add that directly to my <code>blog</code> layout file, so they will only be included on blog post pages.</p>
+<pre><code class="language-html">---
+layout: layouts/base
+---
+&lt;style&gt;
+  /* Blog Styles */
+  body {
+    color: #333;
+    font-size: 16px;
+  }
+  a {
+    color: #009688;
+  }
+  main {
+    background: url(/assets/img/bg.png) repeat;
+  }
+&lt;/style&gt;
+
+&lt;a class=&quot;back-to-index&quot; href=&quot;/#blog&quot;&gt;
+  Back to blog index
+&lt;/a&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    {{ content | safe }}
+  &lt;/article&gt;
+&lt;/main&gt;
+</code></pre>
+<p>And so on, and so on. By the time I'm done with all my changes, my single blog post page is back to looking the way it used to  🎉</p>
+<p><img src="screenshot-blog-post-with-css.jpg" alt="screenshot of this blog post hosted locally, with all the original CSS styles re-enabled"></p>
+<h2>Next Steps</h2>
+<p>I've made huge progress! But I'm only touching the tip of the iceberg. Eleventy is the foundation that will help me</p>
+<ul>
+<li>write blog posts in markdown and have them automatically converted to HTML</li>
+<li>easily change the layout of all my blogs posts at once time</li>
+</ul>
+<p>That's all well and good, but there's so much more I want to tackle. The biggest items on my to do list are</p>
+<ul>
+<li>create a blog <a href="https://www.11ty.dev/docs/collections/">collection</a>, so I can publish a new post and have it automatically my blog index</li>
+<li>create <a href="https://www.11ty.dev/docs/shortcodes/">shortcodes</a>, for each type of repeated section of my portfolio like <a href="http://localhost:8080/#projects">Projects</a></li>
+<li>better code syntax highlighting in blog post</li>
+</ul>
+<p>And I've got a giant wish list of enhancements somewhere that includes some more ambitious things, like removing jQuery and Materialize dependencies, enhancing accessibility, configuring the site as a progressive web app, creating an open source portfolio template, etc...</p>
+<p>One step at a time, though! Stay tuned for the next installment, and thanks for reading.</p>
+
+    <hr>
+    <p>
+      <a href="mailto:andrew@andrewborstein.com">Email me</a> anytime to offer
+      feedback, ask questions, or just say hello 👋.
+    </p>
+  </article>
+</main>
+
+
+    <!--
+      Google Analytics
+      -------------------------------------------------
+      If you want to enable your own account, assign analyticsId to your
+      google analytics id, which should be the numbers following "UA-", e.g.
+      var analyticsId = "12345678-9"
+    -->
+    <script>
+      var analyticsId;
+
+      // If analytics id has been manually defined
+      if (analyticsId) {
+        // Initialize GA with local var
+        initGoogleAnalytics(analyticsId);
+      } else {
+        // Initialize GA with Netlify env var available via lamba function
+        fetch("/.netlify/functions/env_vars")
+          .then(getEnvVar)
+          .then(initGoogleAnalytics)
+          .catch(handleError);
+      }
+
+      // -------------------------------------------------
+      // Helper Functions
+      // --------------------------------------------------
+
+      function handleError(error) {
+        console.log("error", error);
+      }
+
+      function getEnvVar(response) {
+        // If the request was successful
+        if (response.ok) {
+          // Return the response text
+          return response.text();
+        } else {
+          // Return a rejected Promise object, triggering the .catch()
+          return Promise.reject(response);
+        }
+      }
+
+      // Set Up Google Analytics
+      function initGoogleAnalytics(analyticsId) {
+        if (analyticsId) {
+          // Inject the Google Analytics Tag Manager script into the DOM
+          analyticsUrl =
+            "https://www.googletagmanager.com/gtag/js?id=UA-" + analyticsId;
+          var ref = document.getElementsByTagName("script")[0];
+          var script = document.createElement("script");
+          script.src = analyticsUrl;
+          ref.parentNode.insertBefore(script, ref);
+
+          // Initialize Google Analytics
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "UA-" + analyticsId);
+        }
+      }
+    </script>
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- Materialize - Compiled and minified JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script>
+      // Materialize - Initializers
+      $(document).ready(function () {
+        $(".scrollspy").scrollSpy();
+        // Initialize collapse button
+        $(".button-collapse").sideNav({
+          menuWidth: 190, // Default is 240
+          edge: "left", // Choose the horizontal origin
+          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        });
+      });
+    </script>
+
+    <!-- prettier-ignore -->
+    <small hidden>
+           ___                       ___           ___                    ___                                     ___
+          /\  \                     /\__\         /\  \                  /\__\                      ___          /\__\
+          \:\  \       ___         /:/ _/_        \:\  \                /:/ _/_       ___          /\  \        /:/ _/_
+           \:\  \     /\__\       /:/ /\  \        \:\  \              /:/ /\__\     /\__\         \:\  \      /:/ /\__\
+       ___ /::\  \   /:/__/      /:/ /::\  \   ___ /::\  \            /:/ /:/  /    /:/__/          \:\  \    /:/ /:/ _/_
+      /\  /:/\:\__\ /::\  \     /:/__\/\:\__\ /\  /:/\:\__\          /:/_/:/  /    /::\  \      ___  \:\__\  /:/_/:/ /\__\
+      \:\/:/  \/__/ \/\:\  \__  \:\  \ /:/  / \:\/:/  \/__/          \:\/:/  /     \/\:\  \__  /\  \ |:|  |  \:\/:/ /:/  /
+       \::/__/       ~~\:\/\__\  \:\  /:/  /   \::/__/                \::/__/       ~~\:\/\__\ \:\  \|:|  |   \::/_/:/  /
+        \:\  \          \::/  /   \:\/:/  /     \:\  \                 \:\  \          \::/  /  \:\__|:|__|    \:\/:/  /
+         \:\__\         /:/  /     \::/  /       \:\__\                 \:\__\         /:/  /    \::::/__/      \::/  /
+          \/__/         \/__/       \/__/         \/__/                  \/__/         \/__/      ~~~~           \/__/
+    </small>
+  </body>
+</html>

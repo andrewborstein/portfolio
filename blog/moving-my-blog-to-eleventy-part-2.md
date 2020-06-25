@@ -14,6 +14,7 @@ View all posts in this Eleventy series:
 
 - [Part 1: Installing Node with NVM](/blog/moving-my-blog-to-eleventy-part-1/)
 - [Part 2: Getting Started](/blog/moving-my-blog-to-eleventy-part-2/)
+- [Part 3: Creating Layouts](/blog/moving-my-blog-to-eleventy-part-3/)
 
 ---
 
