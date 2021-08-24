@@ -1,12 +1,42 @@
 <h1>My portfolio, created for <a href="http://andrewborstein.com">andrewborstein.com</a></h1>
-<p>Tools used to build this website (first created in 2015, with only minor content updates since):</p>
-<ul>
-<li><a href="https://pages.github.com">GitHub Pages</a> - you can host any static website (HTML, CSS, JS) really easily using GitHub, totally for free!</li>
-<li><a href="https://materializecss.com">Materialize</a> - a super handy CSS framework to get Google's Material Design components and style</li>
-<li>And a bunch of custom CSS to get it looking just right.</li>
-</ul>
-<h2>Note</h2>
-<ul>
-<li>I recently removed Grunt as a build tool dependency and moved my site hosting to Netlify. All files are completely static (for the time being), but they also live in a <code>/public</code> folder instead of the root. If you don't use Netlify, feel free to move everything back into the  root folder instead.</li>
-<li>Make sure to set <code>analyticsId</code> to your unique GA account id inside the <code>Google Analytics</code> script tag at the bottom of the <code>&lt;body&gt;</code>, if you want to use your own Google Analytics account.</li>
-</ul>
+<h2>Background</h2>
+<p>This website was first created in 2015 (!), with mostly minor content updates since. The move to 11ty is still ongoing, so some of these installation steps may be incomplete.</p>
+<h2>Installation</h2>
+<p><strong>Hosting on Netlify</strong>
+I recently removed Grunt as a build tool dependency and moved my site hosting to Netlify. All files are completely static (for the time being), but they also live in a <code>/public</code> folder instead of the root. If you don't use Netlify, feel free to move everything back into the  root folder instead.</p>
+<p><strong>Set your own Google Analytics ID</strong>
+Make sure to set <code>analyticsId</code> to your unique GA account id inside the <code>Google Analytics</code> script tag at the bottom of the <code>&lt;body&gt;</code>, if you want to use your own Google Analytics account.</p>
+<h2>Using the <code>gh-pages</code> branch</h2>
+<p>Download the <code>gh-pages</code> branch if you want a bare-bones no-dependency website. As long as you have a valid <code>index.html</code> in the root of the folder, you should have <a href="https://pages.github.com/">free hosting from Github</a>.</p>
+<h2>Using the <code>eleventy</code> branch</h2>
+<p>Download the <code>eleventy</code> branch if you want a more modern setup using <a href="https://11ty.dev/">Eleventy</a> to compile different formats into HTML and enable templating. See installation steps below, although I still need to write something up on how to host with Eleventy.</p>
+<p><strong>Installation</strong>
+0. Install <a href="https://www.atlassian.com/git/tutorials/install-git">Git</a> &amp; <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/">Node/NPM</a></p>
+<ol>
+<li>Get a copy of this git repository locally by <a href="https://github.com/andrewborstein/portfolio/archive/refs/heads/eleventy.zip">downloading a zip file</a> or <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository">forking the repo</a> and cloning it to your machine.</li>
+<li>Open the folder in a terminal window, e.g. <code>$ cd path/to/portfolio</code></li>
+<li>Check out the <code>eleventy</code> branch if it's not the default <code>$ git checkout eleventy</code></li>
+<li>Install the package dependencies <code>$ npm install</code></li>
+</ol>
+<p><strong>Developing Locally</strong></p>
+<ol>
+<li>Start a webserver with <code>$ npm start</code> where saved files are automatically re-compiled.</li>
+<li>View the website in your browser at http://localhost:8080.</li>
+</ol>
+<p><strong>Create content</strong>
+This step is still very much a work in progress. So you're kind of on your own to tinker and add/remove/modify stuff as you want.</p>
+<h2>FAQ</h2>
+<p><strong>Can I copy your site and publish my own version of it?</strong></p>
+<p>Yes! Seriously, do whatever you want with it. Just don't, like, sell it for profit without maybe dropping me a line first 😄</p>
+<p><strong>Something doesn't work</strong></p>
+<p>I rarely have time to make changes to the site, so I'm sure lots of stuff will become old and broken over time. But I love fixing bugs! So don't hesitate to reach out at andrew@andrewborstein.com if you find an issue.</p>
+<p><strong>How did you get started in web development? What's your story?</strong></p>
+<p>I'm flattered that anyone would be curious — I'll (hopefully) write a blog post about that soon. The short answer is that I don't have a CS degree and I stumbled my way through to where I am now. Lots of ups and downs and hard work and lucky breaks and helpful peers and mentors.</p>
+<p><strong>Do you have any advice for someone new to web development?</strong></p>
+<p>Also great fodder for an eventual blog post, but basically it's two things:</p>
+<ol>
+<li>Build stuff. Any stuff. More stuff. Never enough stuff.</li>
+<li>Find a way to build stuff in any kind of professional capacity.</li>
+</ol>
+<h2>Feedback</h2>
+<p>Any questions? Any steps missing or wrong? Email me at andrew@andrewborstein.com</p>
