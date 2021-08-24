@@ -20,6 +20,7 @@ Download the `gh-pages` branch if you want a bare-bones no-dependency website. A
 Download the `eleventy` branch if you want a more modern setup using [Eleventy](https://11ty.dev/) to compile different formats into HTML and enable templating. See installation steps below, although I still need to write something up on how to host with Eleventy.
 
 **Installation**
+
 0. Install [Git](https://www.atlassian.com/git/tutorials/install-git) & [Node/NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)
 1. Get a copy of this git repository locally by [downloading a zip file](https://github.com/andrewborstein/portfolio/archive/refs/heads/eleventy.zip) or [forking the repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) and cloning it to your machine.
 2. Open the folder in a terminal window, e.g. `$ cd path/to/portfolio`
@@ -27,10 +28,12 @@ Download the `eleventy` branch if you want a more modern setup using [Eleventy](
 4. Install the package dependencies `$ npm install`
 
 **Developing Locally**
+
 1. Start a webserver with `$ npm start` where saved files are automatically re-compiled.
 2. View the website in your browser at http://localhost:8080.
 
 **Create content**
+
 This step is still very much a work in progress. So you're kind of on your own to tinker and add/remove/modify stuff as you want.
 
 ## FAQ
