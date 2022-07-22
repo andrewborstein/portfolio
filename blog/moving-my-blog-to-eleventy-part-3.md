@@ -10,7 +10,7 @@ description: "We walk through how to create two layouts using Eleventy: a base l
 
 ### Black lives matter
 
-Last time around I had just published [the second blog post in as many weeks](http://localhost:8080/blog/moving-my-blog-to-eleventy-part-2/). Then a global pandemic took more than 100,000 lives in the U.S. and George Floyd was murdered by police and my blog didn't feel so important anymore. 
+Last time around I had just published [the second blog post in as many weeks](/blog/moving-my-blog-to-eleventy-part-2/). Then a global pandemic took more than 100,000 lives in the U.S. and George Floyd was murdered by police and my blog didn't feel so important anymore. 
 
 I've found it really challenging to know exactly what to do or say. So I've been trying to spend more of my energy on listening, learning, donating, and advocating. To that end, here are some resources I have found really useful or am currently working through:
 
