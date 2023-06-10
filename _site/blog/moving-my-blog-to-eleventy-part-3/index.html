@@ -2,115 +2,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Materialize - Compiled and minified CSS-->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width initial-scale=1"/>
+    <meta
+    http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- Materialize - Compiled and minified CSS-->
     <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
-    />
-    <!-- Font Awesome Icon - CSS-->
-    <link
-      rel="stylesheet"
-      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-    />
+    rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"/> <!-- Font Awesome Icon - CSS-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <title>Moving my blog to Eleventy, Part 3: Creating Layouts</title>
     <!-- Open Graph-->
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Moving my blog to Eleventy, Part 3: Creating Layouts" />
-    <meta property="og:description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout." />
-    <meta property="og:url" content="andrewborstein.com" />
-    <meta property="og:site_name" content="Moving my blog to Eleventy, Part 3: Creating Layouts" />
-    <meta property="article:publisher" content="andrewborstein.com" />
-    <meta property="og:image" content="" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@andrewarei" />
-    <meta name="twitter:title" content="Moving my blog to Eleventy, Part 3: Creating Layouts" />
-    <meta name="twitter:description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout." />
-    <meta name="twitter:url" content="andrewborstein.com" />
-    <meta name="author" content="Andrew Borstein" />
-    <meta name="description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout." />
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/assets/img/favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/assets/img/favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/assets/img/favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/assets/img/favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/assets/img/favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/assets/img/favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/assets/img/favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/assets/img/favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/img/favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/assets/img/favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/assets/img/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/img/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/assets/img/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Moving my blog to Eleventy, Part 3: Creating Layouts"/>
+    <meta property="og:description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout."/>
+    <meta property="og:url" content="andrewborstein.com"/>
+    <meta property="og:site_name" content="Moving my blog to Eleventy, Part 3: Creating Layouts"/>
+    <meta property="article:publisher" content="andrewborstein.com"/>
+    <meta property="og:image" content=""/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@andrewarei"/>
+    <meta name="twitter:title" content="Moving my blog to Eleventy, Part 3: Creating Layouts"/>
+    <meta name="twitter:description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout."/>
+    <meta name="twitter:url" content="andrewborstein.com"/>
+    <meta name="author" content="Andrew Borstein"/>
+    <meta name="description" content="We walk through how to create two layouts using Eleventy: a base layout for every page on the site and a blog layout specifically for blog posts that extends the base layout."/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="/assets/img/favicon/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png"/>
     <meta
-      name="msapplication-TileImage"
-      content="/assets/img/favicon/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <!--if lt IE 9script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
-	-->
-    <meta name="robots" content="index, follow" />
+    name="theme-color" content="#ffffff"/> <!-- if lt IE 9script(src='//html5shim.googlecode.com/svn/trunk/html5.js') -->
+    <meta name="robots" content="index, follow"/>
   </head>
   <body>
     
@@ -665,17 +599,11 @@ layout: layouts/base
   </article>
 </main>
 
-
-    <!--
-      Google Analytics
-      -------------------------------------------------
-      If you want to enable your own account, assign analyticsId to your
-      google analytics id, which should be the numbers following "UA-", e.g.
-      var analyticsId = "12345678-9"
-    -->
+    <!-- Google Analytics ------------------------------------------------- If you want to enable your own account, assign
+    analyticsId to your google analytics id, which should be the numbers following "UA-", e.g. var analyticsId =
+    "12345678-9" -->
     <script>
       var analyticsId;
-
       // If analytics id has been manually defined
       if (analyticsId) {
         // Initialize GA with local var
@@ -687,15 +615,11 @@ layout: layouts/base
           .then(initGoogleAnalytics)
           .catch(handleError);
       }
-
-      // -------------------------------------------------
-      // Helper Functions
+      // ------------------------------------------------- Helper Functions
       // --------------------------------------------------
-
       function handleError(error) {
         console.log("error", error);
       }
-
       function getEnvVar(response) {
         // If the request was successful
         if (response.ok) {
@@ -706,18 +630,15 @@ layout: layouts/base
           return Promise.reject(response);
         }
       }
-
       // Set Up Google Analytics
       function initGoogleAnalytics(analyticsId) {
         if (analyticsId) {
           // Inject the Google Analytics Tag Manager script into the DOM
-          analyticsUrl =
-            "https://www.googletagmanager.com/gtag/js?id=UA-" + analyticsId;
+          analyticsUrl = "https://www.googletagmanager.com/gtag/js?id=UA-" + analyticsId;
           var ref = document.getElementsByTagName("script")[0];
           var script = document.createElement("script");
           script.src = analyticsUrl;
           ref.parentNode.insertBefore(script, ref);
-
           // Initialize Google Analytics
           window.dataLayer = window.dataLayer || [];
           function gtag() {
@@ -730,7 +651,6 @@ layout: layouts/base
     </script>
     <!-- jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
     <!-- Materialize - Compiled and minified JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
     <script>
@@ -745,20 +665,14 @@ layout: layouts/base
         });
       });
     </script>
-
     <!-- prettier-ignore -->
     <small hidden>
-           ___                       ___           ___                    ___                                     ___
-          /\  \                     /\__\         /\  \                  /\__\                      ___          /\__\
-          \:\  \       ___         /:/ _/_        \:\  \                /:/ _/_       ___          /\  \        /:/ _/_
-           \:\  \     /\__\       /:/ /\  \        \:\  \              /:/ /\__\     /\__\         \:\  \      /:/ /\__\
-       ___ /::\  \   /:/__/      /:/ /::\  \   ___ /::\  \            /:/ /:/  /    /:/__/          \:\  \    /:/ /:/ _/_
-      /\  /:/\:\__\ /::\  \     /:/__\/\:\__\ /\  /:/\:\__\          /:/_/:/  /    /::\  \      ___  \:\__\  /:/_/:/ /\__\
-      \:\/:/  \/__/ \/\:\  \__  \:\  \ /:/  / \:\/:/  \/__/          \:\/:/  /     \/\:\  \__  /\  \ |:|  |  \:\/:/ /:/  /
-       \::/__/       ~~\:\/\__\  \:\  /:/  /   \::/__/                \::/__/       ~~\:\/\__\ \:\  \|:|  |   \::/_/:/  /
-        \:\  \          \::/  /   \:\/:/  /     \:\  \                 \:\  \          \::/  /  \:\__|:|__|    \:\/:/  /
-         \:\__\         /:/  /     \::/  /       \:\__\                 \:\__\         /:/  /    \::::/__/      \::/  /
-          \/__/         \/__/       \/__/         \/__/                  \/__/         \/__/      ~~~~           \/__/
+      ___ ___ ___ ___ ___ /\ \ /\__\ /\ \ /\__\ ___ /\__\ \:\ \ ___ /:/ _/_ \:\ \ /:/ _/_ ___ /\ \ /:/ _/_ \:\ \ /\__\ /:/ /\
+      \ \:\ \ /:/ /\__\ /\__\ \:\ \ /:/ /\__\ ___ /::\ \ /:/__/ /:/ /::\ \ ___ /::\ \ /:/ /:/ / /:/__/ \:\ \ /:/ /:/ _/_ /\
+      /:/\:\__\ /::\ \ /:/__\/\:\__\ /\ /:/\:\__\ /:/_/:/ / /::\ \ ___ \:\__\ /:/_/:/ /\__\ \:\/:/ \/__/ \/\:\ \__ \:\ \ /:/ /
+      \:\/:/ \/__/ \:\/:/ / \/\:\ \__ /\ \ |:| | \:\/:/ /:/ / \::/__/ ~~\:\/\__\ \:\ /:/ / \::/__/ \::/__/ ~~\:\/\__\ \:\ \|:|
+      | \::/_/:/ / \:\ \ \::/ / \:\/:/ / \:\ \ \:\ \ \::/ / \:\__|:|__| \:\/:/ / \:\__\ /:/ / \::/ / \:\__\ \:\__\ /:/ /
+      \::::/__/ \::/ / \/__/ \/__/ \/__/ \/__/ \/__/ \/__/ ~~~~ \/__/
     </small>
   </body>
 </html>

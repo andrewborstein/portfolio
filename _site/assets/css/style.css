@@ -140,7 +140,7 @@ h3 {
   height: 100vh;
 }
 #intro.section {
-  background: url(../../assets/img/andrew-borstein-2a.jpg) no-repeat top
+  background: url('https://res.cloudinary.com/aborstein/image/upload/q_auto:eco/v1686357430/andrew-full-3x2.jpg') no-repeat top
     center/cover;
   position: relative;
 }
@@ -150,6 +150,7 @@ h3 {
   left: 0;
   position: absolute;
   top: 0;
+  padding: 3rem 5rem;
 }
 #intro.section .container *:not(span) {
   font-weight: 300;
@@ -163,8 +164,11 @@ h3 {
 #intro.section .teal {
   padding: 0 10px;
 }
+#intro h2 {
+  font-size: calc(1em + 3vw);
+}
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
   height: 100%;
   left: 0;
   position: absolute;
@@ -406,11 +410,21 @@ small {
     top: initial;
   }
 }
+@media (max-width: 1200px) {
+  #intro.section .container {
+    padding: 0 1.5rem;
+  }
+}
 @media (max-width: 600px) {
   h2 {
     font-size: 22px;
     line-height: 200%;
-    margin: 30px 0 0;
+    margin: 1rem 0 0;
+  }
+  #intro.section .container {
+    padding: 0 1.5rem;
+    right: 0;
+    text-align: center;
   }
   #intro.section .container *:not(span) {
     padding: 0;
@@ -442,6 +456,6 @@ small {
     margin: 0 auto;
   }
   #intro.section {
-    background-position-x: 30%;
+    background-position-x: 80%;
   }
 }
