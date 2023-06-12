@@ -323,6 +323,16 @@ small {
 .teal {
   background-color: #008073 !important;
 }
+.flex.row {
+  display: flex;
+}
+.flex.row .card {
+  margin-bottom: 0;
+  height: 100%;
+}
+.flex.row .card-content {
+  height: 100%;
+}
 @media (min-width: 1200px) {
   #experience .container {
     width: 860px;
